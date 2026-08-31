@@ -40,6 +40,39 @@ MANUAL_ADDRESSES: dict[str, str] = {
     "FORMAGGIO SOUTH END": "268 Shawmut Ave, Boston, MA 02118, USA",
     "BACCO’S WINE AND CHEESE": "31 Saint James Avenue, Boston, MA, USA",
     "BACCO'S WINE AND CHEESE": "31 Saint James Avenue, Boston, MA, USA",
+    "ASKA": "47 S 5th St, Brooklyn, NY 11249, USA",
+    "ATOMIX": "104 E 30th St, New York, NY 10016, USA",
+    "DINNER PARTY BROOKLYN": "274 Hall St, Brooklyn, NY 11205, USA",
+    "GETAWAY": "743 Riverside Dr, New York, NY 10031, USA",
+    "MOONFLOWER": "201 W 11th St, New York, NY 10014, USA",
+    "CHEESEPLATE BROOKLYN": "323 Court St, Brooklyn, NY 11231, USA",
+}
+
+# Permanently closed — drop from dataset even if still listed on FIND-US
+REMOVE_NAMES = {
+    "BOLERO",
+    "ILIS",
+    "MENA",
+}
+
+# Post-scrape fixes: rename / replace address / expand one listing into multiple sites
+# Each entry replaces the scraped row for that name.
+LOCATION_OVERRIDES: dict[str, list[dict[str, str]]] = {
+    "ASKA": [{"name": "ASKA", "address": "47 S 5th St, Brooklyn, NY 11249, USA"}],
+    "ATOMIX": [{"name": "ATOMIX", "address": "104 E 30th St, New York, NY 10016, USA"}],
+    "CHEESEPLATE BROOKLYN": [
+        {"name": "Cheeseplate Brooklyn", "address": "323 Court St, Brooklyn, NY 11231, USA"},
+        {"name": "Cheeseplate Brooklyn", "address": "400 7th Ave, Brooklyn, NY 11215, USA"},
+    ],
+    "DINNER PARTY BROOKLYN": [
+        {"name": "Dinner Party", "address": "274 Hall St, Brooklyn, NY 11205, USA"},
+    ],
+    "GETAWAY": [
+        {"name": "The Getaway 151", "address": "743 Riverside Dr, New York, NY 10031, USA"},
+    ],
+    "MOONFLOWER": [
+        {"name": "MOONFLOWER", "address": "201 W 11th St, New York, NY 10014, USA"},
+    ],
 }
 
 CITY_HINTS: dict[str, list[str]] = {
@@ -397,6 +430,81 @@ def enrich(venues: list[dict[str, str]], cache_path: Path, retry_unresolved: boo
     return rows
 
 
+def geocode_street_address(
+    address: str,
+    session: requests.Session,
+    cache: dict[str, Any],
+    pause: float = 0.4,
+) -> tuple[float | None, float | None, str]:
+    """Geocode a known street address (Photon first). Returns lat, lng, display address."""
+    key = f"addr::{address.strip().lower()}"
+    if key in cache and cache[key]:
+        hit = cache[key]
+        return hit.get("latitude"), hit.get("longitude"), hit.get("address") or address
+
+    try:
+        res = session.get(PHOTON_URL, params={"q": address, "limit": 1}, timeout=30)
+        res.raise_for_status()
+        features = res.json().get("features") or []
+    except requests.RequestException:
+        time.sleep(pause)
+        cache[key] = None
+        return None, None, address
+
+    time.sleep(pause)
+    if not features:
+        cache[key] = None
+        return None, None, address
+
+    feature = features[0]
+    coords = (feature.get("geometry") or {}).get("coordinates") or []
+    if len(coords) < 2:
+        cache[key] = None
+        return None, None, address
+
+    lng, lat = float(coords[0]), float(coords[1])
+    props = feature.get("properties") or {}
+    display = _format_photon_address(props) or address
+    cache[key] = {"latitude": lat, "longitude": lng, "address": display}
+    return lat, lng, display
+
+
+def apply_corrections(rows: list[dict[str, Any]], cache_path: Path) -> list[dict[str, Any]]:
+    """Remove closed venues and apply manual address/name overrides."""
+    cache = _load_cache(cache_path)
+    session = requests.Session()
+    session.headers.update({"User-Agent": USER_AGENT, "Accept": "application/json"})
+
+    remove = {_norm_name(n).upper() for n in REMOVE_NAMES}
+    overrides = {_norm_name(k).upper(): v for k, v in LOCATION_OVERRIDES.items()}
+
+    out: list[dict[str, Any]] = []
+    for row in rows:
+        key = _norm_name(row.get("name") or "").upper()
+        if key in remove:
+            continue
+        if key not in overrides:
+            out.append(row)
+            continue
+
+        template = {k: v for k, v in row.items()}
+        for override in overrides[key]:
+            new_row = dict(template)
+            new_row["name"] = override.get("name") or row["name"]
+            street = override["address"]
+            lat, lng, display = geocode_street_address(street, session, cache)
+            new_row["address"] = street if not display else street
+            # Prefer the user-provided street text; keep geocoded coords.
+            new_row["address"] = street
+            new_row["latitude"] = lat
+            new_row["longitude"] = lng
+            new_row["geocode_status"] = "resolved" if lat is not None else "unresolved"
+            out.append(new_row)
+
+    _save_cache(cache_path, cache)
+    return out
+
+
 def save(rows: list[dict[str, Any]], out_dir: Path) -> tuple[Path, Path]:
     out_dir.mkdir(parents=True, exist_ok=True)
     json_path = out_dir / "unified_ferments_locations.json"
@@ -430,12 +538,14 @@ def save(rows: list[dict[str, Any]], out_dir: Path) -> tuple[Path, Path]:
 
 def main() -> None:
     root = Path(__file__).resolve().parents[1]
+    cache_path = root / "data" / "uf_geocode_cache.json"
     venues = parse_venues(fetch_html())
     print(f"Parsed {len(venues)} Unified Ferments venues")
-    rows = enrich(venues, root / "data" / "uf_geocode_cache.json")
+    rows = enrich(venues, cache_path)
+    rows = apply_corrections(rows, cache_path)
     json_path, csv_path = save(rows, root / "data")
     resolved = sum(1 for r in rows if r["geocode_status"] == "resolved")
-    print(f"Resolved addresses for {resolved}/{len(rows)}")
+    print(f"After corrections: {len(rows)} venues ({resolved} resolved)")
     print(f"Wrote {json_path}")
     print(f"Wrote {csv_path}")
     unresolved = [r["name"] for r in rows if r["geocode_status"] != "resolved"]
