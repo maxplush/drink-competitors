@@ -11,6 +11,7 @@ from folium.plugins import MarkerCluster
 COMPETITOR_COLORS = {
     "NON": "#1f9d57",
     "Villbrygg": "#c45c26",
+    "Unified Ferments": "#2f5d8c",
 }
 
 DATA_DIR = Path(__file__).resolve().parent / "data"
