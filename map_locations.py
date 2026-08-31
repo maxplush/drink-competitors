@@ -218,11 +218,8 @@ def build_dashboard(rows: list[dict]) -> str:
                 "lng": r.get("longitude"),
             }
         )
-    competitors = sorted({r["competitor"] for r in table_rows if r["competitor"]})
     payload = json.dumps(table_rows, ensure_ascii=False)
-    competitor_options = "\n".join(
-        f'<option value="{c}">{c}</option>' for c in competitors
-    )
+    total = len(table_rows)
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -230,112 +227,229 @@ def build_dashboard(rows: list[dict]) -> str:
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Competitor Locations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400&display=swap" rel="stylesheet" />
   <style>
     :root {{
-      --ink: #141414;
-      --muted: #6b6b66;
-      --line: #e4e4df;
-      --bg: #f7f7f3;
-      --panel: #ffffff;
-      --accent: #111;
+      --paper: #eceeea;
+      --panel: #fbfcfa;
+      --hover: #f2f4ef;
+      --ink: #101a1e;
+      --ink-2: #5c6b70;
+      --ink-3: #8d9a9e;
+      --rule: #d5dbd5;
+      --rule-soft: #e7eae4;
+      --c-non: #136f63;
+      --c-vil: #8a6b16;
+      --c-uni: #8b3a62;
     }}
     * {{ box-sizing: border-box; }}
     html, body {{
       margin: 0; height: 100%;
-      font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      color: var(--ink); background: var(--bg);
+      font-family: Archivo, sans-serif;
+      font-size: 15px;
+      color: var(--ink);
+      background: var(--paper);
     }}
     .app {{ display: flex; flex-direction: column; height: 100%; }}
     header {{
       flex: none; display: flex; align-items: center; gap: 18px;
-      padding: 12px 18px; background: var(--panel);
-      border-bottom: 1px solid var(--line);
+      padding: 14px 20px; background: var(--panel);
+      border-bottom: 1px solid var(--rule);
     }}
     header h1 {{
-      margin: 0; font-size: 15px; font-weight: 650; letter-spacing: .02em;
+      margin: 0;
+      font-family: Newsreader, serif;
+      font-weight: 400;
+      font-size: 25px;
+      color: var(--ink);
     }}
-    .tabs {{ display: flex; gap: 4px; margin-left: auto; }}
+    .tabs {{ display: flex; gap: 6px; margin-left: auto; }}
     .tab {{
-      border: 1px solid transparent; background: transparent;
-      padding: 8px 14px; border-radius: 999px; cursor: pointer;
-      font-size: 13px; color: var(--muted);
+      border: 1px solid var(--rule); background: transparent;
+      padding: 7px 12px; cursor: pointer;
+      font-family: inherit; font-size: 13.5px; color: var(--ink-2);
     }}
-    .tab:hover {{ color: var(--ink); background: #efefe9; }}
+    .tab:hover {{ background: var(--hover); color: var(--ink); }}
     .tab.is-active {{
-      color: #fff; background: var(--accent); border-color: var(--accent);
+      color: #fff; background: var(--ink); border-color: var(--ink);
     }}
     main {{ flex: 1; min-height: 0; position: relative; }}
     .panel {{ position: absolute; inset: 0; display: none; }}
     .panel.is-active {{ display: flex; flex-direction: column; }}
-    #panel-map iframe {{
-      border: 0; width: 100%; height: 100%; display: block; background: #f2f2f0;
+
+    .map-shell {{
+      flex: 1; min-height: 0; display: flex; flex-direction: column;
+      padding: 14px 20px 20px;
     }}
+    .map-legend {{
+      flex: none; display: flex; flex-wrap: wrap; gap: 14px 18px;
+      align-items: center; margin-bottom: 10px;
+      font-size: 12px; color: var(--ink-2);
+    }}
+    .map-legend .dot {{
+      width: 8px; height: 8px; border-radius: 50%;
+      display: inline-block; margin-right: 6px; vertical-align: middle;
+    }}
+    .map-shell iframe {{
+      flex: 1; width: 100%; min-height: 0; display: block;
+      border: 1px solid var(--rule); background: var(--panel);
+    }}
+
     .db-toolbar {{
-      flex: none; display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
-      padding: 12px 16px; background: var(--panel); border-bottom: 1px solid var(--line);
+      flex: none; display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: flex-end;
+      padding: 14px 20px; background: var(--panel);
+      border-bottom: 1px solid var(--rule);
     }}
-    .db-toolbar label {{
-      font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted);
-      display: flex; flex-direction: column; gap: 4px;
+    .db-toolbar .field {{
+      display: flex; flex-direction: column; gap: 5px;
+    }}
+    .db-toolbar .field > span {{
+      font-size: 12px; color: var(--ink-2);
     }}
     .db-toolbar select, .db-toolbar input {{
-      font: inherit; font-size: 13px; color: var(--ink);
-      border: 1px solid var(--line); border-radius: 8px;
-      padding: 8px 10px; min-width: 180px; background: #fff;
+      font: inherit; font-size: 13.5px; color: var(--ink);
+      border: 1px solid var(--rule); border-radius: 0;
+      padding: 8px 10px; min-width: 160px; background: var(--panel);
     }}
-    .db-toolbar input {{ min-width: 240px; }}
-    .count {{
-      margin-left: auto; font-size: 13px; color: var(--muted);
+    .db-toolbar input {{ min-width: 220px; }}
+    .chips {{
+      display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
     }}
-    .table-wrap {{ flex: 1; overflow: auto; }}
+    .chip {{
+      display: inline-flex; align-items: center; gap: 6px;
+      border: 1px solid var(--rule); background: var(--panel);
+      padding: 7px 11px; cursor: pointer;
+      font-family: inherit; font-size: 12.5px; color: var(--ink);
+    }}
+    .chip:hover {{ background: var(--hover); }}
+    .chip.is-active {{
+      background: var(--ink); border-color: var(--ink); color: #fff;
+    }}
+    .chip .dot {{
+      width: 7px; height: 7px; border-radius: 50%; flex: none;
+    }}
+    .chip.is-active .dot {{ box-shadow: 0 0 0 1px rgba(255,255,255,.35); }}
+    .chip-count {{
+      font-size: 12px; color: var(--ink-3); font-variant-numeric: tabular-nums;
+    }}
+    .chip.is-active .chip-count {{ color: rgba(255,255,255,.75); }}
+
+    .share {{
+      flex: none; padding: 12px 20px 10px; background: var(--panel);
+      border-bottom: 1px solid var(--rule);
+    }}
+    .share-bar {{
+      display: flex; width: 100%; height: 7px; background: var(--rule-soft);
+      overflow: hidden;
+    }}
+    .share-bar .seg {{
+      height: 100%; min-width: 0;
+      transition: flex-basis .25s ease;
+    }}
+    .share-bar .seg-non {{ background: var(--c-non); }}
+    .share-bar .seg-vil {{ background: var(--c-vil); }}
+    .share-bar .seg-uni {{ background: var(--c-uni); }}
+    .share-label {{
+      margin-top: 8px; font-size: 13.5px; color: var(--ink-2);
+      font-variant-numeric: tabular-nums;
+    }}
+    .share-label strong {{
+      color: var(--ink); font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }}
+    @media (prefers-reduced-motion: reduce) {{
+      .share-bar .seg {{ transition: none; }}
+    }}
+
+    .table-wrap {{ flex: 1; overflow: auto; background: var(--panel); }}
     table {{
-      width: 100%; border-collapse: collapse; font-size: 13px; background: var(--panel);
+      width: 100%; border-collapse: collapse;
+      font-size: 13.5px; background: var(--panel);
     }}
     thead th {{
       position: sticky; top: 0; z-index: 1;
-      background: #f0f0eb; text-align: left; font-weight: 600;
-      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      background: var(--paper); text-align: left;
+      font-size: 12.5px; font-weight: 600; color: var(--ink-2);
+      padding: 10px 14px; border-bottom: 1px solid var(--rule);
       white-space: nowrap;
     }}
     tbody td {{
-      padding: 9px 12px; border-bottom: 1px solid #efefe9;
+      padding: 10px 14px; border-bottom: 1px solid var(--rule-soft);
       vertical-align: top;
     }}
+    tbody tr:hover {{ background: var(--hover); }}
+    td.col-brand {{
+      font-size: 12.5px; color: var(--ink);
+      border-left: 3px solid transparent;
+      white-space: nowrap;
+    }}
+    tr.c-NON td.col-brand {{ border-left-color: var(--c-non); }}
+    tr.c-Villbrygg td.col-brand {{ border-left-color: var(--c-vil); }}
+    tr.c-Unified td.col-brand {{ border-left-color: var(--c-uni); }}
     td.col-address {{
-      min-width: 260px;
-      max-width: 420px;
-      white-space: normal;
-      line-height: 1.35;
-      font-weight: 500;
+      min-width: 240px; max-width: 400px;
+      white-space: normal; line-height: 1.4;
     }}
-    th.col-address {{ min-width: 260px; }}
-    .name-cell {{ font-weight: 600; }}
-    .name-cell .addr-sub {{
-      display: block; margin-top: 3px; font-weight: 400;
-      color: var(--muted); font-size: 12px; line-height: 1.35;
-    }}
-    tbody tr:hover {{ background: #fafaf7; }}
-    .comp-pill {{
-      display: inline-block; padding: 2px 8px; border-radius: 999px;
-      font-size: 12px; font-weight: 600; background: #eee; white-space: nowrap;
-    }}
-    .comp-NON {{ background: #e5f6ec; color: #1f9d57; }}
-    .comp-Villbrygg {{ background: #f8ebe3; color: #c45c26; }}
-    .comp-Unified {{ background: #e7eef5; color: #2f5d8c; }}
-    .muted {{ color: var(--muted); }}
+    th.col-address {{ min-width: 240px; }}
+    .name-cell {{ font-weight: 500; }}
+    .name-cell .addr-sub,
+    .name-cell .meta-line {{ display: none; }}
+    .muted {{ color: var(--ink-3); }}
     .empty {{
-      padding: 48px 20px; text-align: center; color: var(--muted); font-size: 14px;
+      padding: 48px 20px; text-align: center; color: var(--ink-2); font-size: 15px;
     }}
+    .empty p {{ margin: 0 0 6px; }}
+    .empty .hint {{ font-size: 12.5px; color: var(--ink-3); }}
     a.maps {{
-      color: #2f5d8c; text-decoration: none; font-size: 12px; white-space: nowrap;
+      color: var(--ink); text-decoration: underline;
+      text-underline-offset: 2px; font-size: 12.5px; white-space: nowrap;
     }}
-    a.maps:hover {{ text-decoration: underline; }}
+    a.maps:hover {{ color: var(--ink-2); }}
+
+    .tab:focus-visible,
+    .chip:focus-visible,
+    .db-toolbar select:focus-visible,
+    .db-toolbar input:focus-visible,
+    a.maps:focus-visible {{
+      outline: 2px solid var(--ink);
+      outline-offset: 2px;
+    }}
+
+    @media (max-width: 860px) {{
+      thead {{ display: none; }}
+      table, tbody, tr, td {{ display: block; width: 100%; }}
+      tbody tr {{
+        border-bottom: 1px solid var(--rule);
+        border-left: 3px solid transparent;
+        padding: 12px 14px 12px 12px;
+        margin: 0;
+      }}
+      tr.c-NON {{ border-left-color: var(--c-non); }}
+      tr.c-Villbrygg {{ border-left-color: var(--c-vil); }}
+      tr.c-Unified {{ border-left-color: var(--c-uni); }}
+      tbody td {{
+        border: 0; padding: 0; width: auto !important;
+      }}
+      td.col-brand,
+      td.col-address,
+      td.col-city,
+      td.col-region,
+      td.col-type,
+      td.col-map {{ display: none; }}
+      .name-cell .meta-line {{
+        display: block; margin-top: 4px;
+        font-weight: 400; font-size: 12px;
+        color: var(--ink-2); line-height: 1.4;
+      }}
+    }}
   </style>
 </head>
 <body>
   <div class="app">
     <header>
-      <h1>Competitor Locations</h1>
+      <h1>Competitor locations</h1>
       <nav class="tabs" role="tablist">
         <button class="tab is-active" type="button" data-tab="map">Map</button>
         <button class="tab" type="button" data-tab="db">Competitor database</button>
@@ -343,20 +457,42 @@ def build_dashboard(rows: list[dict]) -> str:
     </header>
     <main>
       <section id="panel-map" class="panel is-active" role="tabpanel">
-        <iframe src="competitors_map.html" title="Competitor map"></iframe>
+        <div class="map-shell">
+          <div class="map-legend" aria-label="Brand legend">
+            <span><span class="dot" style="background:var(--c-non)"></span>NON</span>
+            <span><span class="dot" style="background:var(--c-vil)"></span>Villbrygg</span>
+            <span><span class="dot" style="background:var(--c-uni)"></span>Unified Ferments</span>
+          </div>
+          <iframe src="competitors_map.html" title="Competitor map"></iframe>
+        </div>
       </section>
       <section id="panel-db" class="panel" role="tabpanel">
         <div class="db-toolbar">
-          <label>Competitor
-            <select id="competitorFilter">
-              <option value="">All competitors</option>
-              {competitor_options}
+          <div class="field">
+            <span>Competitor</span>
+            <div class="chips" role="group" aria-label="Competitor">
+              <button type="button" class="chip is-active" data-competitor="">All <span class="chip-count" data-count-for="">0</span></button>
+              <button type="button" class="chip" data-competitor="NON"><span class="dot" style="background:var(--c-non)"></span>NON <span class="chip-count" data-count-for="NON">0</span></button>
+              <button type="button" class="chip" data-competitor="Villbrygg"><span class="dot" style="background:var(--c-vil)"></span>Villbrygg <span class="chip-count" data-count-for="Villbrygg">0</span></button>
+              <button type="button" class="chip" data-competitor="Unified Ferments"><span class="dot" style="background:var(--c-uni)"></span>Unified Ferments <span class="chip-count" data-count-for="Unified Ferments">0</span></button>
+            </div>
+          </div>
+          <label class="field"><span>Region</span>
+            <select id="regionFilter">
+              <option value="">All regions</option>
             </select>
           </label>
-          <label>Search
+          <label class="field"><span>Search</span>
             <input id="searchInput" type="search" placeholder="Name, address, city…" autocomplete="off" />
           </label>
-          <div class="count" id="resultCount"></div>
+        </div>
+        <div class="share">
+          <div class="share-bar" id="shareBar" aria-hidden="true">
+            <span class="seg seg-non" id="segNon" style="flex:0 0 0%"></span>
+            <span class="seg seg-vil" id="segVil" style="flex:0 0 0%"></span>
+            <span class="seg seg-uni" id="segUni" style="flex:0 0 0%"></span>
+          </div>
+          <div class="share-label"><strong id="shareN">0</strong> of {total:,} locations</div>
         </div>
         <div class="table-wrap">
           <table>
@@ -373,13 +509,17 @@ def build_dashboard(rows: list[dict]) -> str:
             </thead>
             <tbody id="tableBody"></tbody>
           </table>
-          <div class="empty" id="emptyState" hidden>No locations match your filters.</div>
+          <div class="empty" id="emptyState" hidden>
+            <p>No locations match these filters.</p>
+            <p class="hint">Clear the search box or switch back to all brands.</p>
+          </div>
         </div>
       </section>
     </main>
   </div>
   <script>
     const DATA = {payload};
+    const TOTAL = DATA.length;
 
     const tabs = document.querySelectorAll('.tab');
     const panels = {{
@@ -395,16 +535,31 @@ def build_dashboard(rows: list[dict]) -> str:
       }});
     }});
 
-    const competitorFilter = document.getElementById('competitorFilter');
+    const chips = Array.from(document.querySelectorAll('.chip'));
+    const regionFilter = document.getElementById('regionFilter');
     const searchInput = document.getElementById('searchInput');
     const tbody = document.getElementById('tableBody');
     const emptyState = document.getElementById('emptyState');
-    const resultCount = document.getElementById('resultCount');
+    const shareN = document.getElementById('shareN');
+    const segNon = document.getElementById('segNon');
+    const segVil = document.getElementById('segVil');
+    const segUni = document.getElementById('segUni');
 
-    function pillClass(name) {{
-      if (name === 'NON') return 'comp-NON';
-      if (name === 'Villbrygg') return 'comp-Villbrygg';
-      if (name === 'Unified Ferments') return 'comp-Unified';
+    let activeCompetitor = '';
+
+    // Region options from data
+    const regions = Array.from(new Set(DATA.map((r) => r.region).filter(Boolean))).sort((a, b) => a.localeCompare(b));
+    regions.forEach((region) => {{
+      const opt = document.createElement('option');
+      opt.value = region;
+      opt.textContent = region;
+      regionFilter.appendChild(opt);
+    }});
+
+    function rowClass(name) {{
+      if (name === 'NON') return 'c-NON';
+      if (name === 'Villbrygg') return 'c-Villbrygg';
+      if (name === 'Unified Ferments') return 'c-Unified';
       return '';
     }}
 
@@ -416,40 +571,85 @@ def build_dashboard(rows: list[dict]) -> str:
         .replaceAll('"', '&quot;');
     }}
 
-    function filtered() {{
-      const comp = competitorFilter.value;
+    function matchesRegionSearch(row) {{
+      const region = regionFilter.value;
       const q = searchInput.value.trim().toLowerCase();
+      if (region && row.region !== region) return false;
+      if (!q) return true;
+      const hay = [row.competitor, row.name, row.address, row.city, row.region, row.type]
+        .join(' ').toLowerCase();
+      return hay.includes(q);
+    }}
+
+    function filtered() {{
       return DATA.filter((row) => {{
-        if (comp && row.competitor !== comp) return false;
-        if (!q) return true;
-        const hay = [row.competitor, row.name, row.address, row.city, row.region, row.type]
-          .join(' ').toLowerCase();
-        return hay.includes(q);
+        if (activeCompetitor && row.competitor !== activeCompetitor) return false;
+        return matchesRegionSearch(row);
       }});
+    }}
+
+    function updateChipCounts() {{
+      const base = DATA.filter(matchesRegionSearch);
+      const counts = {{
+        '': base.length,
+        'NON': 0,
+        'Villbrygg': 0,
+        'Unified Ferments': 0,
+      }};
+      base.forEach((row) => {{
+        if (counts[row.competitor] != null) counts[row.competitor] += 1;
+      }});
+      document.querySelectorAll('[data-count-for]').forEach((el) => {{
+        const key = el.getAttribute('data-count-for');
+        el.textContent = (counts[key] || 0).toLocaleString();
+      }});
+    }}
+
+    function updateShare(rows) {{
+      const n = rows.length;
+      shareN.textContent = n.toLocaleString();
+      const brands = {{ NON: 0, Villbrygg: 0, 'Unified Ferments': 0 }};
+      rows.forEach((row) => {{
+        if (brands[row.competitor] != null) brands[row.competitor] += 1;
+      }});
+      const pct = (v) => (n ? ((v / n) * 100) : 0);
+      segNon.style.flex = '0 0 ' + pct(brands.NON) + '%';
+      segVil.style.flex = '0 0 ' + pct(brands.Villbrygg) + '%';
+      segUni.style.flex = '0 0 ' + pct(brands['Unified Ferments']) + '%';
     }}
 
     function render() {{
       const rows = filtered();
-      resultCount.textContent = rows.length.toLocaleString() + ' location' + (rows.length === 1 ? '' : 's');
+      updateChipCounts();
+      updateShare(rows);
       emptyState.hidden = rows.length > 0;
       tbody.innerHTML = rows.map((row) => {{
         const maps = (row.lat != null && row.lng != null)
           ? `<a class="maps" href="https://www.google.com/maps?q=${{row.lat}},${{row.lng}}" target="_blank" rel="noopener">Map</a>`
           : '';
         const addr = escapeHtml(row.address || '');
-        return `<tr>
-          <td><span class="comp-pill ${{pillClass(row.competitor)}}">${{escapeHtml(row.competitor)}}</span></td>
-          <td class="name-cell">${{escapeHtml(row.name)}}<span class="addr-sub">${{addr}}</span></td>
+        const meta = [row.address, row.city, row.region, row.type]
+          .filter(Boolean).map(escapeHtml).join(' · ');
+        return `<tr class="${{rowClass(row.competitor)}}">
+          <td class="col-brand">${{escapeHtml(row.competitor)}}</td>
+          <td class="name-cell">${{escapeHtml(row.name)}}<span class="meta-line">${{meta}}</span></td>
           <td class="col-address">${{addr || '<span class="muted">—</span>'}}</td>
-          <td>${{escapeHtml(row.city)}}</td>
-          <td>${{escapeHtml(row.region)}}</td>
-          <td class="muted">${{escapeHtml(row.type)}}</td>
-          <td>${{maps}}</td>
+          <td class="col-city">${{escapeHtml(row.city)}}</td>
+          <td class="col-region">${{escapeHtml(row.region)}}</td>
+          <td class="col-type muted">${{escapeHtml(row.type)}}</td>
+          <td class="col-map">${{maps}}</td>
         </tr>`;
       }}).join('');
     }}
 
-    competitorFilter.addEventListener('change', render);
+    chips.forEach((chip) => {{
+      chip.addEventListener('click', () => {{
+        activeCompetitor = chip.dataset.competitor || '';
+        chips.forEach((c) => c.classList.toggle('is-active', c === chip));
+        render();
+      }});
+    }});
+    regionFilter.addEventListener('change', render);
     searchInput.addEventListener('input', render);
     render();
   </script>
