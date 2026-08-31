@@ -1,3 +1,4 @@
-# Add project dependencies below, e.g.:
-# flask>=3.0.0
-# requests>=2.31.0
+requests>=2.31.0
+folium>=0.17.0
+beautifulsoup4>=4.12.0
+lxml>=5.0.0

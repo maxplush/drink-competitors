@@ -72,3 +72,11 @@ Desktop.ini
 *.db
 data/local/
 uploads/
+
+# Local scrape probes / scratch
+non_page.html
+find_non.html
+showcase.js
+_probe_*.py
+data/_vill_probe.html
+data/geocode_cache.json
