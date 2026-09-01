@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 import folium
@@ -14,6 +15,7 @@ COMPETITOR_COLORS = {
     "Villbrygg": "#8a6b16",
     "Unified Ferments": "#8b3a62",
     "Researched Prospect Locations": "#3d5a80",
+    "Savoure": "#a34a2e",
 }
 
 # Preset camera positions: New York first, then US, then world
@@ -195,11 +197,111 @@ def _display_address(row: dict) -> str:
     state = (row.get("state") or "").strip()
 
     if address:
-        # If address is only "City, Region", keep it; otherwise prefer the street line.
         return address
 
     parts = [p for p in (city, state or region) if p]
     return ", ".join(parts)
+
+
+NY_CITIES = {
+    "NEW YORK",
+    "BROOKLYN",
+    "QUEENS",
+    "BRONX",
+    "THE BRONX",
+    "MANHATTAN",
+    "STATEN ISLAND",
+    "LONG ISLAND CITY",
+    "ASTORIA",
+    "WILLIAMSBURG",
+    "GLENDALE",
+    "HUDSON",
+    "YONKERS",
+    "WHITE PLAINS",
+    "BUFFALO",
+    "ROCHESTER",
+    "ALBANY",
+    "SYRACUSE",
+    "FLUSHING",
+    "JAMAICA",
+    "FOREST HILLS",
+    "RIVERDALE",
+    "HARLEM",
+    "BUSHWICK",
+    "PARK SLOPE",
+    "DUMBO",
+    "GREENPOINT",
+    "BEDFORD-STUYVESANT",
+    "CROWN HEIGHTS",
+    "FORT GREENE",
+    "COBBLE HILL",
+    "CARROLL GARDENS",
+    "RED HOOK",
+    "SUNSET PARK",
+    "BAY RIDGE",
+    "BOROUGH PARK",
+    "FLATBUSH",
+    "PROSPECT HEIGHTS",
+    "GOWANUS",
+    "BOERUM HILL",
+    "DOWNTOWN BROOKLYN",
+    "MIDTOWN",
+    "SOHO",
+    "NOHO",
+    "TRIBECA",
+    "CHELSEA",
+    "WEST VILLAGE",
+    "EAST VILLAGE",
+    "LOWER EAST SIDE",
+    "UPPER WEST SIDE",
+    "UPPER EAST SIDE",
+    "HARLEM",
+    "WASHINGTON HEIGHTS",
+    "INWOOD",
+}
+
+
+def _infer_state(row: dict) -> str:
+    """Normalize/infer US state so NY includes Brooklyn, Queens, etc."""
+    raw = (row.get("state") or "").strip()
+    if raw:
+        lower = raw.lower()
+        if lower in {"ny", "new york", "new york state"}:
+            return "NY"
+        if lower in {"ca", "california"}:
+            return "CA"
+        if lower in {"ma", "massachusetts"}:
+            return "MA"
+        if lower in {"nj", "new jersey"}:
+            return "NJ"
+        if lower in {"dc", "district of columbia", "washington dc", "washington, dc"}:
+            return "DC"
+        if lower in {"nc", "north carolina"}:
+            return "NC"
+        if lower in {"sc", "south carolina"}:
+            return "SC"
+        if lower in {"vt", "vermont"}:
+            return "VT"
+        if len(raw) == 2:
+            return raw.upper()
+        return raw
+
+    city = (row.get("suburb") or "").strip().upper()
+    address = (row.get("address") or "").upper()
+    region = (row.get("region") or "").strip().upper()
+
+    if city in NY_CITIES:
+        return "NY"
+    if ", NY" in address or re.search(r"\bNY\b", address):
+        return "NY"
+    if "BROOKLYN" in address or "QUEENS, NY" in address:
+        return "NY"
+    if "NEW YORK, NEW YORK" in address or re.search(r"NEW YORK\s+\d{5}", address):
+        return "NY"
+
+    if region == "NORWAY":
+        return ""
+    return ""
 
 
 def build_dashboard(rows: list[dict]) -> str:
@@ -213,7 +315,7 @@ def build_dashboard(rows: list[dict]) -> str:
                 "address": _display_address(r),
                 "city": r.get("suburb") or "",
                 "region": r.get("region") or "",
-                "state": r.get("state") or "",
+                "state": _infer_state(r),
                 "type": r.get("venue_type") or "",
                 "lat": r.get("latitude"),
                 "lng": r.get("longitude"),
@@ -227,7 +329,7 @@ def build_dashboard(rows: list[dict]) -> str:
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Competitor Locations</title>
+  <title>Astra Competitor + Stock List Navigator</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400&display=swap" rel="stylesheet" />
@@ -245,6 +347,7 @@ def build_dashboard(rows: list[dict]) -> str:
       --c-vil: #8a6b16;
       --c-uni: #8b3a62;
       --c-pro: #3d5a80;
+      --c-sav: #a34a2e;
     }}
     * {{ box-sizing: border-box; }}
     html, body {{
@@ -354,6 +457,7 @@ def build_dashboard(rows: list[dict]) -> str:
     .share-bar .seg-vil {{ background: var(--c-vil); }}
     .share-bar .seg-uni {{ background: var(--c-uni); }}
     .share-bar .seg-pro {{ background: var(--c-pro); }}
+    .share-bar .seg-sav {{ background: var(--c-sav); }}
     .share-label {{
       margin-top: 8px; font-size: 13.5px; color: var(--ink-2);
       font-variant-numeric: tabular-nums;
@@ -392,6 +496,7 @@ def build_dashboard(rows: list[dict]) -> str:
     tr.c-Villbrygg td.col-brand {{ border-left-color: var(--c-vil); }}
     tr.c-Unified td.col-brand {{ border-left-color: var(--c-uni); }}
     tr.c-Prospects td.col-brand {{ border-left-color: var(--c-pro); }}
+    tr.c-Savoure td.col-brand {{ border-left-color: var(--c-sav); }}
     td.col-address {{
       min-width: 240px; max-width: 400px;
       white-space: normal; line-height: 1.4;
@@ -434,12 +539,14 @@ def build_dashboard(rows: list[dict]) -> str:
       tr.c-Villbrygg {{ border-left-color: var(--c-vil); }}
       tr.c-Unified {{ border-left-color: var(--c-uni); }}
       tr.c-Prospects {{ border-left-color: var(--c-pro); }}
+      tr.c-Savoure {{ border-left-color: var(--c-sav); }}
       tbody td {{
         border: 0; padding: 0; width: auto !important;
       }}
       td.col-brand,
       td.col-address,
       td.col-city,
+      td.col-state,
       td.col-region,
       td.col-type,
       td.col-map {{ display: none; }}
@@ -454,7 +561,7 @@ def build_dashboard(rows: list[dict]) -> str:
 <body>
   <div class="app">
     <header>
-      <h1>Competitor locations</h1>
+      <h1>Astra Competitor + Stock List Navigator</h1>
       <nav class="tabs" role="tablist">
         <button class="tab is-active" type="button" data-tab="map">Map</button>
         <button class="tab" type="button" data-tab="db">Competitor database</button>
@@ -468,6 +575,7 @@ def build_dashboard(rows: list[dict]) -> str:
             <span><span class="dot" style="background:var(--c-vil)"></span>Villbrygg</span>
             <span><span class="dot" style="background:var(--c-uni)"></span>Unified Ferments</span>
             <span><span class="dot" style="background:var(--c-pro)"></span>Researched Prospect Locations</span>
+            <span><span class="dot" style="background:var(--c-sav)"></span>Savoure</span>
           </div>
           <iframe src="competitors_map.html" title="Competitor map"></iframe>
         </div>
@@ -482,11 +590,12 @@ def build_dashboard(rows: list[dict]) -> str:
               <button type="button" class="chip" data-competitor="Villbrygg"><span class="dot" style="background:var(--c-vil)"></span>Villbrygg <span class="chip-count" data-count-for="Villbrygg">0</span></button>
               <button type="button" class="chip" data-competitor="Unified Ferments"><span class="dot" style="background:var(--c-uni)"></span>Unified Ferments <span class="chip-count" data-count-for="Unified Ferments">0</span></button>
               <button type="button" class="chip" data-competitor="Researched Prospect Locations"><span class="dot" style="background:var(--c-pro)"></span>Prospects <span class="chip-count" data-count-for="Researched Prospect Locations">0</span></button>
+              <button type="button" class="chip" data-competitor="Savoure"><span class="dot" style="background:var(--c-sav)"></span>Savoure <span class="chip-count" data-count-for="Savoure">0</span></button>
             </div>
           </div>
-          <label class="field"><span>Region</span>
-            <select id="regionFilter">
-              <option value="">All regions</option>
+          <label class="field"><span>State / region</span>
+            <select id="placeFilter">
+              <option value="">All places</option>
             </select>
           </label>
           <label class="field"><span>Search</span>
@@ -499,6 +608,7 @@ def build_dashboard(rows: list[dict]) -> str:
             <span class="seg seg-vil" id="segVil" style="flex:0 0 0%"></span>
             <span class="seg seg-uni" id="segUni" style="flex:0 0 0%"></span>
             <span class="seg seg-pro" id="segPro" style="flex:0 0 0%"></span>
+            <span class="seg seg-sav" id="segSav" style="flex:0 0 0%"></span>
           </div>
           <div class="share-label"><strong id="shareN">0</strong> of {total:,} locations</div>
         </div>
@@ -510,6 +620,7 @@ def build_dashboard(rows: list[dict]) -> str:
                 <th>Name</th>
                 <th class="col-address">Street address</th>
                 <th>City</th>
+                <th>State</th>
                 <th>Region</th>
                 <th>Type</th>
                 <th></th>
@@ -544,7 +655,7 @@ def build_dashboard(rows: list[dict]) -> str:
     }});
 
     const chips = Array.from(document.querySelectorAll('.chip'));
-    const regionFilter = document.getElementById('regionFilter');
+    const placeFilter = document.getElementById('placeFilter');
     const searchInput = document.getElementById('searchInput');
     const tbody = document.getElementById('tableBody');
     const emptyState = document.getElementById('emptyState');
@@ -553,16 +664,46 @@ def build_dashboard(rows: list[dict]) -> str:
     const segVil = document.getElementById('segVil');
     const segUni = document.getElementById('segUni');
     const segPro = document.getElementById('segPro');
+    const segSav = document.getElementById('segSav');
 
     let activeCompetitor = '';
 
-    // Region options from data
+    const STATE_LABELS = {{
+      NY: 'New York',
+      CA: 'California',
+      MA: 'Massachusetts',
+      NJ: 'New Jersey',
+      DC: 'Washington DC',
+      NC: 'North Carolina',
+      SC: 'South Carolina',
+      VT: 'Vermont',
+    }};
+
+    // Place filter: US states (esp. New York = whole state) + country regions
+    const placeOptions = [];
+    const states = Array.from(new Set(DATA.map((r) => r.state).filter(Boolean))).sort((a, b) => {{
+      const la = STATE_LABELS[a] || a;
+      const lb = STATE_LABELS[b] || b;
+      return la.localeCompare(lb);
+    }});
+    states.forEach((state) => {{
+      placeOptions.push({{
+        value: 'state:' + state,
+        label: STATE_LABELS[state] || state,
+      }});
+    }});
     const regions = Array.from(new Set(DATA.map((r) => r.region).filter(Boolean))).sort((a, b) => a.localeCompare(b));
     regions.forEach((region) => {{
+      placeOptions.push({{
+        value: 'region:' + region,
+        label: region,
+      }});
+    }});
+    placeOptions.forEach((item) => {{
       const opt = document.createElement('option');
-      opt.value = region;
-      opt.textContent = region;
-      regionFilter.appendChild(opt);
+      opt.value = item.value;
+      opt.textContent = item.label;
+      placeFilter.appendChild(opt);
     }});
 
     function rowClass(name) {{
@@ -570,6 +711,7 @@ def build_dashboard(rows: list[dict]) -> str:
       if (name === 'Villbrygg') return 'c-Villbrygg';
       if (name === 'Unified Ferments') return 'c-Unified';
       if (name === 'Researched Prospect Locations') return 'c-Prospects';
+      if (name === 'Savoure') return 'c-Savoure';
       return '';
     }}
 
@@ -581,12 +723,18 @@ def build_dashboard(rows: list[dict]) -> str:
         .replaceAll('"', '&quot;');
     }}
 
-    function matchesRegionSearch(row) {{
-      const region = regionFilter.value;
+    function matchesPlaceSearch(row) {{
+      const place = placeFilter.value;
       const q = searchInput.value.trim().toLowerCase();
-      if (region && row.region !== region) return false;
+      if (place) {{
+        if (place.startsWith('state:')) {{
+          if (row.state !== place.slice(6)) return false;
+        }} else if (place.startsWith('region:')) {{
+          if (row.region !== place.slice(7)) return false;
+        }}
+      }}
       if (!q) return true;
-      const hay = [row.competitor, row.name, row.address, row.city, row.region, row.type]
+      const hay = [row.competitor, row.name, row.address, row.city, row.state, row.region, row.type]
         .join(' ').toLowerCase();
       return hay.includes(q);
     }}
@@ -594,18 +742,19 @@ def build_dashboard(rows: list[dict]) -> str:
     function filtered() {{
       return DATA.filter((row) => {{
         if (activeCompetitor && row.competitor !== activeCompetitor) return false;
-        return matchesRegionSearch(row);
+        return matchesPlaceSearch(row);
       }});
     }}
 
     function updateChipCounts() {{
-      const base = DATA.filter(matchesRegionSearch);
+      const base = DATA.filter(matchesPlaceSearch);
       const counts = {{
         '': base.length,
         'NON': 0,
         'Villbrygg': 0,
         'Unified Ferments': 0,
         'Researched Prospect Locations': 0,
+        'Savoure': 0,
       }};
       base.forEach((row) => {{
         if (counts[row.competitor] != null) counts[row.competitor] += 1;
@@ -624,6 +773,7 @@ def build_dashboard(rows: list[dict]) -> str:
         Villbrygg: 0,
         'Unified Ferments': 0,
         'Researched Prospect Locations': 0,
+        'Savoure': 0,
       }};
       rows.forEach((row) => {{
         if (brands[row.competitor] != null) brands[row.competitor] += 1;
@@ -633,6 +783,7 @@ def build_dashboard(rows: list[dict]) -> str:
       segVil.style.flex = '0 0 ' + pct(brands.Villbrygg) + '%';
       segUni.style.flex = '0 0 ' + pct(brands['Unified Ferments']) + '%';
       segPro.style.flex = '0 0 ' + pct(brands['Researched Prospect Locations']) + '%';
+      segSav.style.flex = '0 0 ' + pct(brands.Savoure) + '%';
     }}
 
     function render() {{
@@ -645,13 +796,14 @@ def build_dashboard(rows: list[dict]) -> str:
           ? `<a class="maps" href="https://www.google.com/maps?q=${{row.lat}},${{row.lng}}" target="_blank" rel="noopener">Map</a>`
           : '';
         const addr = escapeHtml(row.address || '');
-        const meta = [row.address, row.city, row.region, row.type]
+        const meta = [row.address, row.city, row.state, row.region, row.type]
           .filter(Boolean).map(escapeHtml).join(' · ');
         return `<tr class="${{rowClass(row.competitor)}}">
           <td class="col-brand">${{escapeHtml(row.competitor)}}</td>
           <td class="name-cell">${{escapeHtml(row.name)}}<span class="meta-line">${{meta}}</span></td>
           <td class="col-address">${{addr || '<span class="muted">—</span>'}}</td>
           <td class="col-city">${{escapeHtml(row.city)}}</td>
+          <td class="col-state">${{escapeHtml(row.state)}}</td>
           <td class="col-region">${{escapeHtml(row.region)}}</td>
           <td class="col-type muted">${{escapeHtml(row.type)}}</td>
           <td class="col-map">${{maps}}</td>
@@ -666,7 +818,7 @@ def build_dashboard(rows: list[dict]) -> str:
         render();
       }});
     }});
-    regionFilter.addEventListener('change', render);
+    placeFilter.addEventListener('change', render);
     searchInput.addEventListener('input', render);
     render();
   </script>
