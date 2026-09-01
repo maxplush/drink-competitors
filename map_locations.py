@@ -18,9 +18,10 @@ COMPETITOR_COLORS = {
     "Savoure": "#a34a2e",
 }
 
-# Preset camera positions: New York first, then US, then world
+# Preset camera positions
 VIEWS = {
     "ny": {"label": "New York", "center": [40.73, -73.98], "zoom": 11},
+    "ca": {"label": "California", "center": [36.7, -119.7], "zoom": 6},
     "us": {"label": "United States", "center": [39.5, -98.0], "zoom": 4},
     "world": {"label": "World", "center": [20.0, 0.0], "zoom": 2},
 }
@@ -189,6 +190,71 @@ def build_map(rows: list[dict]) -> folium.Map:
     return m
 
 
+REGION_LEVEL_CITIES = {
+    "california",
+    "new york",
+    "massachusetts",
+    "new jersey",
+    "washington dc",
+    "north carolina",
+    "south carolina",
+    "vermont",
+    "norway",
+    "united states",
+    "us",
+    "uk",
+    "au",
+}
+
+US_STATE_NAMES = {
+    "California",
+    "New York",
+    "Massachusetts",
+    "New Jersey",
+    "North Carolina",
+    "South Carolina",
+    "Vermont",
+    "District of Columbia",
+}
+
+
+def city_from_address(address: str) -> str:
+    """Pull a city name out of an OSM/Nominatim-style display address."""
+    if not address:
+        return ""
+    parts = [p.strip() for p in address.split(",") if p.strip()]
+    state_idx = None
+    for i, part in enumerate(parts):
+        if part in US_STATE_NAMES or part in {"CA", "NY", "MA", "NJ", "NC", "SC", "VT", "DC"}:
+            state_idx = i
+            break
+    if state_idx is None:
+        return ""
+
+    for j in range(state_idx - 1, -1, -1):
+        part = parts[j]
+        if "County" in part:
+            continue
+        if re.fullmatch(r"\d{5}(?:-\d{4})?", part):
+            continue
+        if re.fullmatch(r"\d+[A-Za-z]?", part):
+            continue
+        if part.lower() in {"united states", "usa"}:
+            continue
+        if "Neighborhood Council" in part or "Council District" in part:
+            continue
+        return part
+    return ""
+
+
+def _display_city(row: dict) -> str:
+    city = (row.get("suburb") or "").strip()
+    if city and city.lower() not in REGION_LEVEL_CITIES:
+        return city
+    extracted = city_from_address(row.get("address") or "")
+    return extracted or city
+
+
 def _display_address(row: dict) -> str:
     """Best human-readable address for the database table."""
     address = (row.get("address") or "").strip()
@@ -313,7 +379,7 @@ def build_dashboard(rows: list[dict]) -> str:
                 "competitor": r.get("competitor") or "",
                 "name": r.get("name") or "",
                 "address": _display_address(r),
-                "city": r.get("suburb") or "",
+                "city": _display_city(r),
                 "region": r.get("region") or "",
                 "state": _infer_state(r),
                 "type": r.get("venue_type") or "",

@@ -489,7 +489,7 @@ def build_rows() -> list[dict[str, Any]]:
                 "address": item["address"],
                 "suburb": city,
                 "region": region,
-                "state": "CA" if "CA" in item["address"].upper() else "NY",
+                "state": "CA" if ", CA" in item["address"].upper() else "NY",
                 "venue_type": item["venue_type"],
                 "contact": item["contact"],
                 "website": item["website"],
