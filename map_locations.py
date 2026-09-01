@@ -10,9 +10,10 @@ from branca.element import Element, MacroElement, Template
 from folium.plugins import MarkerCluster
 
 COMPETITOR_COLORS = {
-    "NON": "#1f9d57",
-    "Villbrygg": "#c45c26",
-    "Unified Ferments": "#2f5d8c",
+    "NON": "#136f63",
+    "Villbrygg": "#8a6b16",
+    "Unified Ferments": "#8b3a62",
+    "Researched Prospect Locations": "#3d5a80",
 }
 
 # Preset camera positions: New York first, then US, then world
@@ -243,6 +244,7 @@ def build_dashboard(rows: list[dict]) -> str:
       --c-non: #136f63;
       --c-vil: #8a6b16;
       --c-uni: #8b3a62;
+      --c-pro: #3d5a80;
     }}
     * {{ box-sizing: border-box; }}
     html, body {{
@@ -351,6 +353,7 @@ def build_dashboard(rows: list[dict]) -> str:
     .share-bar .seg-non {{ background: var(--c-non); }}
     .share-bar .seg-vil {{ background: var(--c-vil); }}
     .share-bar .seg-uni {{ background: var(--c-uni); }}
+    .share-bar .seg-pro {{ background: var(--c-pro); }}
     .share-label {{
       margin-top: 8px; font-size: 13.5px; color: var(--ink-2);
       font-variant-numeric: tabular-nums;
@@ -388,6 +391,7 @@ def build_dashboard(rows: list[dict]) -> str:
     tr.c-NON td.col-brand {{ border-left-color: var(--c-non); }}
     tr.c-Villbrygg td.col-brand {{ border-left-color: var(--c-vil); }}
     tr.c-Unified td.col-brand {{ border-left-color: var(--c-uni); }}
+    tr.c-Prospects td.col-brand {{ border-left-color: var(--c-pro); }}
     td.col-address {{
       min-width: 240px; max-width: 400px;
       white-space: normal; line-height: 1.4;
@@ -429,6 +433,7 @@ def build_dashboard(rows: list[dict]) -> str:
       tr.c-NON {{ border-left-color: var(--c-non); }}
       tr.c-Villbrygg {{ border-left-color: var(--c-vil); }}
       tr.c-Unified {{ border-left-color: var(--c-uni); }}
+      tr.c-Prospects {{ border-left-color: var(--c-pro); }}
       tbody td {{
         border: 0; padding: 0; width: auto !important;
       }}
@@ -462,6 +467,7 @@ def build_dashboard(rows: list[dict]) -> str:
             <span><span class="dot" style="background:var(--c-non)"></span>NON</span>
             <span><span class="dot" style="background:var(--c-vil)"></span>Villbrygg</span>
             <span><span class="dot" style="background:var(--c-uni)"></span>Unified Ferments</span>
+            <span><span class="dot" style="background:var(--c-pro)"></span>Researched Prospect Locations</span>
           </div>
           <iframe src="competitors_map.html" title="Competitor map"></iframe>
         </div>
@@ -475,6 +481,7 @@ def build_dashboard(rows: list[dict]) -> str:
               <button type="button" class="chip" data-competitor="NON"><span class="dot" style="background:var(--c-non)"></span>NON <span class="chip-count" data-count-for="NON">0</span></button>
               <button type="button" class="chip" data-competitor="Villbrygg"><span class="dot" style="background:var(--c-vil)"></span>Villbrygg <span class="chip-count" data-count-for="Villbrygg">0</span></button>
               <button type="button" class="chip" data-competitor="Unified Ferments"><span class="dot" style="background:var(--c-uni)"></span>Unified Ferments <span class="chip-count" data-count-for="Unified Ferments">0</span></button>
+              <button type="button" class="chip" data-competitor="Researched Prospect Locations"><span class="dot" style="background:var(--c-pro)"></span>Prospects <span class="chip-count" data-count-for="Researched Prospect Locations">0</span></button>
             </div>
           </div>
           <label class="field"><span>Region</span>
@@ -491,6 +498,7 @@ def build_dashboard(rows: list[dict]) -> str:
             <span class="seg seg-non" id="segNon" style="flex:0 0 0%"></span>
             <span class="seg seg-vil" id="segVil" style="flex:0 0 0%"></span>
             <span class="seg seg-uni" id="segUni" style="flex:0 0 0%"></span>
+            <span class="seg seg-pro" id="segPro" style="flex:0 0 0%"></span>
           </div>
           <div class="share-label"><strong id="shareN">0</strong> of {total:,} locations</div>
         </div>
@@ -544,6 +552,7 @@ def build_dashboard(rows: list[dict]) -> str:
     const segNon = document.getElementById('segNon');
     const segVil = document.getElementById('segVil');
     const segUni = document.getElementById('segUni');
+    const segPro = document.getElementById('segPro');
 
     let activeCompetitor = '';
 
@@ -560,6 +569,7 @@ def build_dashboard(rows: list[dict]) -> str:
       if (name === 'NON') return 'c-NON';
       if (name === 'Villbrygg') return 'c-Villbrygg';
       if (name === 'Unified Ferments') return 'c-Unified';
+      if (name === 'Researched Prospect Locations') return 'c-Prospects';
       return '';
     }}
 
@@ -595,6 +605,7 @@ def build_dashboard(rows: list[dict]) -> str:
         'NON': 0,
         'Villbrygg': 0,
         'Unified Ferments': 0,
+        'Researched Prospect Locations': 0,
       }};
       base.forEach((row) => {{
         if (counts[row.competitor] != null) counts[row.competitor] += 1;
@@ -608,7 +619,12 @@ def build_dashboard(rows: list[dict]) -> str:
     function updateShare(rows) {{
       const n = rows.length;
       shareN.textContent = n.toLocaleString();
-      const brands = {{ NON: 0, Villbrygg: 0, 'Unified Ferments': 0 }};
+      const brands = {{
+        NON: 0,
+        Villbrygg: 0,
+        'Unified Ferments': 0,
+        'Researched Prospect Locations': 0,
+      }};
       rows.forEach((row) => {{
         if (brands[row.competitor] != null) brands[row.competitor] += 1;
       }});
@@ -616,6 +632,7 @@ def build_dashboard(rows: list[dict]) -> str:
       segNon.style.flex = '0 0 ' + pct(brands.NON) + '%';
       segVil.style.flex = '0 0 ' + pct(brands.Villbrygg) + '%';
       segUni.style.flex = '0 0 ' + pct(brands['Unified Ferments']) + '%';
+      segPro.style.flex = '0 0 ' + pct(brands['Researched Prospect Locations']) + '%';
     }}
 
     function render() {{

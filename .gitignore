@@ -81,6 +81,7 @@ _probe_*.py
 data/_vill_probe.html
 data/geocode_cache.json
 data/uf_geocode_cache.json
+data/prospects_geocode_cache.json
 data/non_nyc_reverse_cache.json
 data/_uf_probe.html
 data/_uf_text.txt
