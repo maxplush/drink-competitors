@@ -956,6 +956,7 @@ def build_dashboard(rows: list[dict]) -> str:
     const STATE_LABELS = {{
       NY: 'New York',
       CA: 'California',
+      CT: 'Connecticut',
       MA: 'Massachusetts',
       NJ: 'New Jersey',
       DC: 'Washington DC',

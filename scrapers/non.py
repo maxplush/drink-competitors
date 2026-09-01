@@ -14,6 +14,56 @@ STOCKISTS_URL = "https://find.non.world/api/stockists"
 SOURCE_URL = "https://us.non.world/pages/store-locator"
 USER_AGENT = "comp-drink/0.1 (+local competitor stockist research)"
 
+# Known street addresses when API only returns city + region
+ADDRESS_OVERRIDES: dict[str, dict[str, str]] = {
+    "LAKE SIDE EMOTIONS": {
+        "address": "113 Main St, Stony Brook, NY 11790",
+        "suburb": "Stony Brook",
+        "state": "NY",
+        "phone": "(631) 675-2750",
+    },
+    "MAIDSTONE ARMS": {
+        "address": "207 Main St, East Hampton, NY 11937",
+        "suburb": "East Hampton",
+        "state": "NY",
+        "phone": "(631) 324-5006",
+    },
+    "THE TOWN CELLAR": {
+        "address": "1089 Boston Post Rd, Darien, CT 06820",
+        "suburb": "Darien",
+        "state": "CT",
+        "phone": "(203) 655-1031",
+    },
+    "LOVE EATS": {
+        "address": "10 Amagansett Square Unit B, Amagansett, NY 11930",
+        "suburb": "Amagansett",
+        "state": "NY",
+        "phone": "(631) 557-3038",
+    },
+    "MAIN STREET FARM": {
+        "address": "36 Main St Unit B & C, Livingston Manor, NY 12758",
+        "suburb": "Livingston Manor",
+        "state": "NY",
+        "phone": "(845) 439-4309",
+        "website": "https://mainstreetfarm.com",
+    },
+    "REFRAME: A DRY SPOT": {
+        "address": "Mobile bar — Willimantic, CT",
+        "suburb": "Willimantic",
+        "state": "CT",
+        "venue_type": "Mobile Bar",
+        "email": "@reframedryspot.com",
+        "website": "https://www.reframedryspot.com/",
+        "notes": "Frances — non-alcoholic mobile bar",
+    },
+    "HUDSON DRY": {
+        "address": "421 Warren St, Hudson, NY 12534",
+        "suburb": "Hudson",
+        "state": "NY",
+        "phone": "(518) 660-0421",
+    },
+}
+
 
 def fetch_stockists(timeout: float = 60.0) -> dict[str, Any]:
     response = requests.get(
@@ -64,8 +114,34 @@ def normalize(payload: dict[str, Any]) -> list[dict[str, Any]]:
     return rows
 
 
+def apply_address_overrides(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Apply manual street addresses and contact info for known stockists."""
+    overrides = {k.upper(): v for k, v in ADDRESS_OVERRIDES.items()}
+    for row in rows:
+        key = (row.get("name") or "").strip().upper()
+        if key not in overrides:
+            continue
+        patch = overrides[key]
+        row["address"] = patch["address"]
+        if patch.get("suburb"):
+            row["suburb"] = patch["suburb"]
+        if patch.get("state"):
+            row["state"] = patch["state"]
+        if patch.get("phone"):
+            row["phone"] = patch["phone"]
+        if patch.get("website"):
+            row["website"] = patch["website"]
+        if patch.get("email"):
+            row["email"] = patch["email"]
+        if patch.get("venue_type"):
+            row["venue_type"] = patch["venue_type"]
+        if patch.get("notes"):
+            row["notes"] = patch["notes"]
+    return rows
+
+
 def scrape() -> list[dict[str, Any]]:
-    return normalize(fetch_stockists())
+    return apply_address_overrides(normalize(fetch_stockists()))
 
 
 def save(rows: list[dict[str, Any]], out_dir: Path) -> tuple[Path, Path]:

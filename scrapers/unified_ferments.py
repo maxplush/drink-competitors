@@ -53,6 +53,7 @@ REMOVE_NAMES = {
     "BOLERO",
     "ILIS",
     "MENA",
+    "ANTO",
 }
 
 # Post-scrape fixes: rename / replace address / expand one listing into multiple sites
@@ -72,6 +73,38 @@ LOCATION_OVERRIDES: dict[str, list[dict[str, str]]] = {
     ],
     "MOONFLOWER": [
         {"name": "MOONFLOWER", "address": "201 W 11th St, New York, NY 10014, USA"},
+    ],
+    "BONNIES": [
+        {
+            "name": "BONNIES",
+            "address": "398 Manhattan Ave, Brooklyn, NY 11211, USA",
+            "phone": "(914) 875-3709",
+            "website": "https://bonniesbrooklyn.com",
+        },
+    ],
+    "LOLO WINE BAR": [
+        {
+            "name": "LOLO WINE BAR",
+            "address": "5140 Sunset Blvd, Los Angeles, CA 90027, USA",
+            "phone": "(323) 665-5656",
+            "website": "https://lolowinebar.com",
+        },
+    ],
+    "AITA": [
+        {
+            "name": "AITA",
+            "address": "132 Greene Ave, Brooklyn, NY 11238, USA",
+            "phone": "(718) 576-3584",
+            "website": "https://aitaclintonhill.com",
+        },
+    ],
+    "ALISON": [
+        {
+            "name": "ALISON",
+            "address": "1651 Lexington Ave, New York, NY 10029, USA",
+            "phone": "(646) 876-1054",
+            "website": "https://alisonny.com",
+        },
     ],
 }
 
@@ -499,6 +532,11 @@ def apply_corrections(rows: list[dict[str, Any]], cache_path: Path) -> list[dict
             new_row["latitude"] = lat
             new_row["longitude"] = lng
             new_row["geocode_status"] = "resolved" if lat is not None else "unresolved"
+            if override.get("phone"):
+                new_row["phone"] = override["phone"]
+                new_row["contact"] = ""
+            if override.get("website"):
+                new_row["website"] = override["website"]
             out.append(new_row)
 
     _save_cache(cache_path, cache)

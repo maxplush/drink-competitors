@@ -392,7 +392,7 @@ RAW_PROSPECTS: list[dict[str, str]] = [
         "name": "AITA",
         "venue_type": "",
         "contact": "+1 718-576-3584",
-        "website": "",
+        "website": "https://aitaclintonhill.com",
         "hours": "",
         "address": "132 Greene Ave, Brooklyn, NY 11238",
         "notes": "",
