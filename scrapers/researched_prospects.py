@@ -11,6 +11,8 @@ from typing import Any
 
 import requests
 
+from scrapers.contact_fields import split_contact
+
 COMPETITOR = "Researched Prospect Locations"
 USER_AGENT = "comp-drink/0.1 (+local competitor stockist research)"
 PHOTON_URL = "https://photon.komoot.io/api/"
@@ -481,6 +483,7 @@ def build_rows() -> list[dict[str, Any]]:
     for i, item in enumerate(RAW_PROSPECTS, start=1):
         city, region = _infer_city_region(item["address"])
         lat, lng = geocode_address(item["address"], session, cache)
+        phone, email = split_contact(item["contact"])
         rows.append(
             {
                 "competitor": COMPETITOR,
@@ -491,7 +494,8 @@ def build_rows() -> list[dict[str, Any]]:
                 "region": region,
                 "state": "CA" if ", CA" in item["address"].upper() else "NY",
                 "venue_type": item["venue_type"],
-                "contact": item["contact"],
+                "phone": phone,
+                "email": email,
                 "website": item["website"],
                 "hours": item["hours"],
                 "notes": item["notes"],
@@ -524,7 +528,8 @@ def save(rows: list[dict[str, Any]], out_dir: Path) -> tuple[Path, Path]:
         "region",
         "state",
         "venue_type",
-        "contact",
+        "phone",
+        "email",
         "website",
         "hours",
         "notes",

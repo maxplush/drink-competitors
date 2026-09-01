@@ -16,7 +16,9 @@
     "longitude": -73.9912946,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -27,7 +29,7 @@
     "region": "US",
     "state": "NY",
     "venue_type": "specialty grocery store",
-    "contact": "+1 212-837-8015",
+    "contact": "",
     "website": "",
     "hours": "Daily 8am-9pm",
     "notes": "",
@@ -35,7 +37,9 @@
     "longitude": -74.0040147,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "+1 212-837-8015",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -46,7 +50,7 @@
     "region": "US",
     "state": "NY",
     "venue_type": "market",
-    "contact": "@dimestimes | +1 646-870-5113",
+    "contact": "",
     "website": "",
     "hours": "Mon-Fri 8am-8pm; Sat-Sun 9am-8pm",
     "notes": "",
@@ -54,7 +58,9 @@
     "longitude": -73.9908127,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "+1 646-870-5113",
+    "email": "@dimestimes"
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -65,15 +71,18 @@
     "region": "US",
     "state": "NY",
     "venue_type": "specialty grocery store",
-    "contact": "info@gemhomenyc.com",
-    "website": "",
+    "contact": "",
+    "website": "https://www.gemhomenyc.com/",
     "hours": "9:00am - 6:00pm",
     "notes": "",
     "latitude": 40.720665,
     "longitude": -73.9959711,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "email": "info@gemhomenyc.com",
+    "phone": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -92,7 +101,9 @@
     "longitude": -73.9948154,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -111,7 +122,9 @@
     "longitude": -73.781736,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -122,15 +135,18 @@
     "region": "US",
     "state": "NY",
     "venue_type": "wine bar",
-    "contact": "+1 347-294-4186",
-    "website": "",
+    "contact": "",
+    "website": "https://www.entrenousbrooklyn.com/",
     "hours": "Tue-Thu 5-11pm; Fri 5pm-12am; Sat 3pm-12am; Sun 3-11pm; Mon closed",
     "notes": "",
     "latitude": 40.6879326,
     "longitude": -73.962875,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1 347-294-4186",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -149,7 +165,9 @@
     "longitude": -73.9714335,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -160,7 +178,7 @@
     "region": "US",
     "state": "NY",
     "venue_type": "cafe/wine bar",
-    "contact": "+1 718-789-7890",
+    "contact": "",
     "website": "",
     "hours": "Mon-Tue 8am-5pm; Wed-Sat 8am-10pm; Sun 8am-8pm",
     "notes": "",
@@ -168,7 +186,9 @@
     "longitude": -73.9662119,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "+1 718-789-7890",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -179,15 +199,18 @@
     "region": "US",
     "state": "NY",
     "venue_type": "restaurant",
-    "contact": "+1 718-857-0101",
-    "website": "",
+    "contact": "",
+    "website": "https://www.pdfnyc.com",
     "hours": "Sun-Thu 5:30-10pm; Fri-Sat 5:30-10:30pm",
     "notes": "",
     "latitude": 40.686862,
     "longitude": -73.962884,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1 718-857-0101",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -198,7 +221,7 @@
     "region": "US",
     "state": "NY",
     "venue_type": "wine bar",
-    "contact": "+1 718-513-9176",
+    "contact": "",
     "website": "",
     "hours": "Mon-Thu 8am-11pm; Fri 8am-12am; Sat 9am-12am; Sun 9am-11pm",
     "notes": "",
@@ -206,7 +229,10 @@
     "longitude": -73.9860837,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1 718-513-9176",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -217,7 +243,7 @@
     "region": "US",
     "state": "NY",
     "venue_type": "wine bar",
-    "contact": "+1 929-337-6022",
+    "contact": "",
     "website": "",
     "hours": "Wed-Sat 6-10pm; Sun-Tue closed",
     "notes": "",
@@ -225,7 +251,9 @@
     "longitude": -73.9948457,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "+1 929-337-6022",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -236,15 +264,18 @@
     "region": "US",
     "state": "NY",
     "venue_type": "bar",
-    "contact": "+1 718-855-7939",
-    "website": "",
+    "contact": "",
+    "website": "https://cloverclubny.com",
     "hours": "Mon-Thu 4pm-12am; Fri 4pm-2am; Sat 12pm-2am; Sun 12pm-12am",
     "notes": "",
     "latitude": 40.6846142,
     "longitude": -73.9922019,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1 718-855-7939",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -255,15 +286,18 @@
     "region": "US",
     "state": "NY",
     "venue_type": "bar",
-    "contact": "+1 347-240-3350",
-    "website": "",
+    "contact": "",
+    "website": "https://dorisbedstuy.com",
     "hours": "Mon-Wed 5pm-1am; Thu 5pm-2am; Fri 5pm-3am; Sat 4pm-3am; Sun 4pm-1am",
     "notes": "",
     "latitude": 40.6813028,
     "longitude": -73.957375,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1 347-240-3350",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -274,15 +308,18 @@
     "region": "US",
     "state": "NY",
     "venue_type": "bar",
-    "contact": "+1 917-231-4766",
-    "website": "",
+    "contact": "",
+    "website": "https://www.ornithologyjazzclub.com/",
     "hours": "Daily 6pm-2am",
     "notes": "",
     "latitude": 40.6955409,
     "longitude": -73.9320351,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1 917-231-4766",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -301,7 +338,10 @@
     "longitude": -73.9419119,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -312,15 +352,18 @@
     "region": "US",
     "state": "NY",
     "venue_type": "bar",
-    "contact": "+1 718-513-0339",
-    "website": "",
+    "contact": "",
+    "website": "https://www.barlunatico.com/",
     "hours": "Daily 5pm-1am",
     "notes": "",
     "latitude": 40.6833788,
     "longitude": -73.9346786,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1 718-513-0339",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -331,15 +374,18 @@
     "region": "US",
     "state": "NY",
     "venue_type": "wine bar",
-    "contact": "+1 929-389-0807",
-    "website": "",
+    "contact": "",
+    "website": "https://www.withothersbrooklyn.com",
     "hours": "Wed-Thu 5pm-12am; Fri 4pm-12am; Sat 2pm-12am; Sun 2-11pm; Mon-Tue closed",
     "notes": "",
     "latitude": 40.7128067,
     "longitude": -73.962569,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1 929-389-0807",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -350,15 +396,18 @@
     "region": "US",
     "state": "NY",
     "venue_type": "wine bar",
-    "contact": "+1 929-492-4758",
-    "website": "",
+    "contact": "",
+    "website": "https://www.saucedbklyn.com/",
     "hours": "Mon-Wed 5pm-12am; Thu 5pm-1am; Fri 5pm-2am; Sat 2pm-2am; Sun 2pm-12am",
     "notes": "",
     "latitude": 40.7126451,
     "longitude": -73.9623269,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1 929-492-4758",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -369,15 +418,18 @@
     "region": "US",
     "state": "NY",
     "venue_type": "wine bar",
-    "contact": "+1 347-529-4321",
-    "website": "",
+    "contact": "",
+    "website": "https://www.laika.bar",
     "hours": "Mon-Thu 6pm-12am; Fri-Sat 6pm-1am; Sun closed",
     "notes": "",
     "latitude": 40.686993,
     "longitude": -73.9620907,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1 347-529-4321",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -396,7 +448,9 @@
     "longitude": -73.9940649,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -407,7 +461,7 @@
     "region": "US",
     "state": "NY",
     "venue_type": "bar",
-    "contact": "+1 646-964-4540",
+    "contact": "",
     "website": "",
     "hours": "Mon 4pm-12am; Tue-Thu 4pm-2am; Fri-Sat 4pm-4am; Sun 4pm-12am",
     "notes": "",
@@ -415,7 +469,9 @@
     "longitude": -73.9942509,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "+1 646-964-4540",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -427,14 +483,17 @@
     "state": "NY",
     "venue_type": "bar",
     "contact": "",
-    "website": "",
+    "website": "https://www.kingstonhall.com/",
     "hours": "Mon-Thu 4pm-2am; Fri-Sat 4pm-4am; Sun 3pm-12am",
     "notes": "",
     "latitude": 40.7295009,
     "longitude": -73.9872677,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -446,14 +505,17 @@
     "state": "NY",
     "venue_type": "bar",
     "contact": "",
-    "website": "",
+    "website": "https://www.raysbarnyc.com/location/les/",
     "hours": "Mon-Thu 5pm-2am; Fri 3pm-2am; Sat-Sun 1pm-2am",
     "notes": "",
     "latitude": 40.7212215,
     "longitude": -73.9924426,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -464,15 +526,18 @@
     "region": "US",
     "state": "NY",
     "venue_type": "wine bar",
-    "contact": "+1 347-294-4197",
-    "website": "",
+    "contact": "",
+    "website": "https://www.frogwineshop.com",
     "hours": "Mon-Fri 2-8pm; Sat-Sun 12-8pm",
     "notes": "",
     "latitude": 40.6881417,
     "longitude": -73.997366,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1 347-294-4197",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -491,7 +556,9 @@
     "longitude": -73.9567005,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -502,15 +569,18 @@
     "region": "US",
     "state": "NY",
     "venue_type": "restaurant",
-    "contact": "+1 718-576-3095",
-    "website": "",
+    "contact": "",
+    "website": "https://www.lilianewyork.com/",
     "hours": "Mon-Thu 5-9:30pm; Fri-Sun 4-9:30pm",
     "notes": "",
     "latitude": 40.7176165,
     "longitude": -73.9524013,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1 718-576-3095",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -521,15 +591,18 @@
     "region": "US",
     "state": "NY",
     "venue_type": "cafe",
-    "contact": "+1 347-844-6474",
-    "website": "",
+    "contact": "",
+    "website": "https://www.misipasta.com/",
     "hours": "Mon-Thu 12-10pm; Fri-Sun 11am-10pm",
     "notes": "",
     "latitude": 40.715875,
     "longitude": -73.9655685,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1 347-844-6474",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -540,15 +613,18 @@
     "region": "US",
     "state": "NY",
     "venue_type": "restaurant",
-    "contact": "+1 347-566-3262",
-    "website": "",
+    "contact": "",
+    "website": "https://www.misinewyork.com",
     "hours": "Mon-Thu 5-9:30pm; Fri-Sun 11:30am-2:30pm & 4:30-9:30pm",
     "notes": "",
     "latitude": 40.7134037,
     "longitude": -73.9672238,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1 347-566-3262",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -567,7 +643,9 @@
     "longitude": -73.8887274,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -586,7 +664,10 @@
     "longitude": -73.9206221,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -605,7 +686,10 @@
     "longitude": -73.9909568,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -616,7 +700,7 @@
     "region": "US",
     "state": "NY",
     "venue_type": "pub",
-    "contact": "+1 347-457-6621",
+    "contact": "",
     "website": "",
     "hours": "Mon-Tue 2pm-12am; Wed-Fri 2pm-2am; Sat-Sun 12pm-2am",
     "notes": "",
@@ -624,7 +708,9 @@
     "longitude": -73.957432,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "+1 347-457-6621",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -635,7 +721,7 @@
     "region": "US",
     "state": "NY",
     "venue_type": "pub",
-    "contact": "+1 718-963-3973",
+    "contact": "",
     "website": "",
     "hours": "Mon-Thu 12pm-1am; Fri 12pm-3am; Sat 11am-3am; Sun 11am-1am",
     "notes": "",
@@ -643,7 +729,9 @@
     "longitude": -73.9615241,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "+1 718-963-3973",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -655,14 +743,17 @@
     "state": "NY",
     "venue_type": "bar",
     "contact": "",
-    "website": "",
+    "website": "https://loversoftodaynyc.com/",
     "hours": "Daily 5pm-4am",
     "notes": "",
     "latitude": 40.7258564,
     "longitude": -73.9833298,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1-212-614-9798",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -674,14 +765,17 @@
     "state": "NY",
     "venue_type": "bar",
     "contact": "",
-    "website": "",
+    "website": "https://www.joyface.nyc",
     "hours": "Tue-Wed 7pm-2am; Thu-Sat 7pm-3am; Sun 7pm-2am; Mon closed",
     "notes": "",
     "latitude": 40.7214545,
     "longitude": -73.9807674,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -693,14 +787,17 @@
     "state": "NY",
     "venue_type": "bar/lounge",
     "contact": "",
-    "website": "",
+    "website": "https://www.instagram.com/twinsloungenyc",
     "hours": "Mon-Thu 4pm-3am; Fri-Sat 3pm-4am; Sun 4pm-3am",
     "notes": "",
     "latitude": 40.7262762,
     "longitude": -73.9520758,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "email": "twinsloungenyc@gmail.com",
+    "phone": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -711,7 +808,7 @@
     "region": "US",
     "state": "NY",
     "venue_type": "bar",
-    "contact": "+1 212-918-1986",
+    "contact": "",
     "website": "",
     "hours": "Mon-Wed 12pm-2am; Thu-Fri 12pm-4am; Sat 11am-4am; Sun 11am-2am",
     "notes": "",
@@ -719,7 +816,9 @@
     "longitude": -74.0021665,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "+1 212-918-1986",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -730,7 +829,7 @@
     "region": "US",
     "state": "NY",
     "venue_type": "software company with pop-up space",
-    "contact": "212-920-1426",
+    "contact": "",
     "website": "",
     "hours": "Mon-Fri 9am-5pm",
     "notes": "",
@@ -738,7 +837,9 @@
     "longitude": -73.9996337,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "212-920-1426",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -749,15 +850,17 @@
     "region": "US",
     "state": "NY",
     "venue_type": "cocktail bar",
-    "contact": "Max is cousins with the owner Gary",
+    "contact": "",
     "website": "https://www.verlainenyc.com/",
     "hours": "Tue-Wed 5pm-12am; Thu 5pm-1am; Fri-Sat 5pm-2am; Sun 5-11pm; Mon closed",
-    "notes": "",
+    "notes": "Contact: Max is cousins with the owner Gary",
     "latitude": 40.7200177,
     "longitude": -73.9878219,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -776,7 +879,9 @@
     "longitude": -73.9557248,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -787,15 +892,18 @@
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "contact": "+1 718-576-3584",
-    "website": "",
-    "hours": "",
+    "contact": "",
+    "website": "https://www.aitarestaurant.com",
+    "hours": "Mo-Th 17:00-22:00; Fr 12:00-15:00,17:00-22:00; Sa-Su 11:00-15:00,17:00-22:00",
     "notes": "",
     "latitude": 40.6864492,
     "longitude": -73.9666416,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1 718-576-3584",
+    "email": ""
   },
   {
     "competitor": "Researched Prospect Locations",
@@ -806,7 +914,7 @@
     "region": "US",
     "state": "CA",
     "venue_type": "small grocer",
-    "contact": "kurt@kurtandwhey.com | +1 805-444-8255",
+    "contact": "",
     "website": "",
     "hours": "Mon-Tue 9:30am-4pm; Wed-Sun 9am-4pm",
     "notes": "Santa Monica CA, not NYC. Email corrected from kurt@kurt@whey.com.",
@@ -814,6 +922,8 @@
     "longitude": -118.494954,
     "source_url": "friend research",
     "scraped_at": "2026-09-01T00:32:17.984048+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "+1 805-444-8255",
+    "email": "kurt@kurtandwhey.com"
   }
 ]

@@ -12,7 +12,13 @@
     "longitude": -73.966651,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://www.aitarestaurant.com",
+    "hours": "Mo-Th 17:00-22:00; Fr 12:00-15:00,17:00-22:00; Sa-Su 11:00-15:00,17:00-22:00",
+    "contact_source": "openstreetmap",
+    "phone": "+1-718-576-3584",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -27,7 +33,11 @@
     "longitude": -73.9470267,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "hours": "Mo-Fr 15:00-22:00; Sa-Su 10:00-22:00",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -42,7 +52,9 @@
     "longitude": -73.9566296,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -57,7 +69,9 @@
     "longitude": -76.5095771,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -72,7 +86,9 @@
     "longitude": -73.5944812,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -87,7 +103,9 @@
     "longitude": -73.9664901,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -102,7 +120,13 @@
     "longitude": -73.9845074,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://www.atoboynyc.com/",
+    "hours": "17:00-21:00; Fr,Sa 17:00-22:00",
+    "contact_source": "openstreetmap",
+    "phone": "+1-646-476-7217",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -117,7 +141,9 @@
     "longitude": -73.9776736,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -132,7 +158,9 @@
     "longitude": -73.8296186,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -147,7 +175,9 @@
     "longitude": -73.9443552,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -162,7 +192,9 @@
     "longitude": -73.9575209,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -177,7 +209,12 @@
     "longitude": -73.9738403,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://casablancahotelbrooklyn.com",
+    "contact_source": "openstreetmap",
+    "phone": "+1-718-568-0758",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -192,7 +229,12 @@
     "longitude": -78.6911236,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://www.timandbonnies.com/",
+    "contact_source": "openstreetmap",
+    "phone": "+1-716-592-9900",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -207,7 +249,11 @@
     "longitude": -73.953866,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "hours": "Mo-Th 12:00-21:00; Fr-Sa 12:00-22:00; Su 12:00-21:00",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -222,7 +268,9 @@
     "longitude": -73.9489067,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -237,7 +285,9 @@
     "longitude": -73.9953678,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -252,7 +302,9 @@
     "longitude": -73.9835117,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -267,7 +319,9 @@
     "longitude": -74.0135868,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -282,7 +336,9 @@
     "longitude": -73.9573871,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -297,7 +353,13 @@
     "longitude": -73.9787653,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://www.chamamama.com/location/chama-mama-uws/",
+    "hours": "Mo-Th 12:00-21:00; Fr 12:00-22:00; Sa 10:00-22:00; Su 10:00-21:00",
+    "contact_source": "openstreetmap",
+    "phone": "+1-917-261-7430",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -312,7 +374,9 @@
     "longitude": -73.9980785,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -327,7 +391,13 @@
     "longitude": -73.9600993,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://www.covenhovennyc.com",
+    "hours": "Mo-Fr 14:00-23:00; Sa-Su 12:00-23:00",
+    "contact_source": "openstreetmap",
+    "phone": "+1-718-483-9950",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -342,7 +412,13 @@
     "longitude": -74.0075097,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://www.crownshy.nyc",
+    "hours": "17:30-24:00",
+    "contact_source": "openstreetmap",
+    "phone": "+1-212-517-1932",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -357,7 +433,9 @@
     "longitude": -73.9442888,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -372,7 +450,12 @@
     "longitude": -73.9424343,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "website": "https://www.daughter.nyc",
+    "hours": "Mo-Fr 08:00-16:00; Sa-Su 09:00-17:00 \"cafe\"||We-Sa 16:00-23:00 \"bar\"",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -387,7 +470,9 @@
     "longitude": -73.9654451,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -402,7 +487,13 @@
     "longitude": -73.9871904,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://www.elevenmadisonpark.com/",
+    "hours": "Mo-We 17:30-22:00; Th-Su 12:00-13:00, 17:30-22:00",
+    "contact_source": "openstreetmap",
+    "phone": "+1 212-889-0905",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -417,7 +508,9 @@
     "longitude": -73.9915054,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -432,7 +525,9 @@
     "longitude": -75.2915623,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -447,7 +542,9 @@
     "longitude": -73.9261758,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -462,7 +559,12 @@
     "longitude": -73.9573171,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "website": "https://www.fourhorsemenbk.com",
+    "hours": "Mo-Th 17:30-22:45; Fr-Su 11:00-15:30,17:30-22:45",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -477,7 +579,9 @@
     "longitude": -73.9029149,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -492,7 +596,9 @@
     "longitude": -73.6518818,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -507,7 +613,12 @@
     "longitude": -73.9959711,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "website": "https://www.gemhomenyc.com/",
+    "hours": "We-Sa 09:00-21:00; Su 09:00-18:00",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -522,7 +633,12 @@
     "longitude": -73.9688147,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "website": "https://www.gertie.nyc/",
+    "hours": "Mo, We-Su 08:00-16:00",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -537,7 +653,9 @@
     "longitude": -73.9504324,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -552,7 +670,9 @@
     "longitude": -74.0256871,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -567,7 +687,11 @@
     "longitude": -73.9580192,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "hours": "Mo-Th 17:00-02:00; Fr 17:00-03:00; Sa 14:00-03:00; Su 14:00-02:00",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -582,7 +706,13 @@
     "longitude": -73.9826929,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://www.insabrooklyn.com/",
+    "hours": "We 17:30-22:00; Th-Sa 17:30-24:00; Su 17:30-22:00",
+    "contact_source": "openstreetmap",
+    "phone": "+1-718-855-2620",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -597,7 +727,13 @@
     "longitude": -73.9939259,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://www.junebk.com",
+    "hours": "Mo-Th 17:00-24:00; Fr 17:00-01:00; Sa 14:00-01:00; Su 14:00-24:00",
+    "contact_source": "openstreetmap",
+    "phone": "+1-917-909-0434",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -612,7 +748,13 @@
     "longitude": -77.0071032,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://kindredfare.com/",
+    "hours": "Mo-Su 17:00-21:00",
+    "contact_source": "openstreetmap",
+    "phone": "+1 315-787-0400",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -627,7 +769,12 @@
     "longitude": -73.9956984,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://www.lavarany.com",
+    "contact_source": "openstreetmap",
+    "phone": "+1-718-422-0065",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -642,7 +789,12 @@
     "longitude": -73.7807992,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://www.lildebsoasis.com/",
+    "contact_source": "openstreetmap",
+    "phone": "+1-518-828-4307",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -657,7 +809,9 @@
     "longitude": -73.9883938,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -672,7 +826,9 @@
     "longitude": -73.9817762,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -687,7 +843,12 @@
     "longitude": -73.9635904,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "website": "https://minusmoonshine.com",
+    "hours": "Mo-Fr 12:00-20:00; Sa 12:00-19:00; Su 12:00-18:00",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -702,7 +863,12 @@
     "longitude": -73.9966096,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "website": "https://www.missionchinesefood.com/",
+    "hours": "Su, Tu-We 17:00-22:00; Th-Sa 17:00-23:00",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -717,7 +883,11 @@
     "longitude": -73.9723829,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "website": "https://www.missadanyc.com",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -732,7 +902,9 @@
     "longitude": -74.0088761,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -747,7 +919,9 @@
     "longitude": -73.278306,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -762,7 +936,13 @@
     "longitude": -73.9800404,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://thenicheshop.co",
+    "hours": "Mo-Sa 12:00-19:00; Su 12:00-18:00",
+    "contact_source": "openstreetmap",
+    "phone": "+1-646-370-4146",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -777,7 +957,12 @@
     "longitude": -73.9856776,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "website": "https://nudibranchnyc.com",
+    "hours": "Tu-Th 17:30-22:00; Fr-Sa 17:30-22:30",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -792,7 +977,9 @@
     "longitude": -73.8296186,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -807,7 +994,11 @@
     "longitude": -73.9371828,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "website": "https://www.ostudiony.com/ocafe",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -822,7 +1013,9 @@
     "longitude": -74.0056634,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -837,7 +1030,9 @@
     "longitude": -73.9206036,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -852,7 +1047,11 @@
     "longitude": -74.0018624,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "website": "https://www.pinchchinese.com/",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -867,7 +1066,9 @@
     "longitude": -76.9240342,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -882,7 +1083,12 @@
     "longitude": -73.9560712,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "website": "https://www.rialtogrande.com",
+    "hours": "Tu-Th 17:00-24:00; Fr 17:00-01:00; Sa 16:00-01:00; Su 16:00-24:00",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -897,7 +1103,11 @@
     "longitude": -73.9335894,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "hours": "Mo-Fr 11:00-24:00;Sa-Su 10:00-24:00",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -912,7 +1122,9 @@
     "longitude": -73.7105271,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -927,7 +1139,9 @@
     "longitude": -78.7548407,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -942,7 +1156,13 @@
     "longitude": -73.9956517,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://www.saintjulivertbk.com",
+    "hours": "Mo-Su 17:00-21:30",
+    "contact_source": "openstreetmap",
+    "phone": "+1-347-987-3710",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -957,7 +1177,12 @@
     "longitude": -73.9650709,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://www.sistersbklyn.com",
+    "contact_source": "openstreetmap",
+    "phone": "+1-347-763-2537",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -972,7 +1197,9 @@
     "longitude": -74.7649311,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -987,7 +1214,13 @@
     "longitude": -73.9960362,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://www.spiritedaway.co",
+    "hours": "Mo-Su 12:00-20:00",
+    "contact_source": "openstreetmap",
+    "phone": "+1-929-277-2520",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1002,7 +1235,12 @@
     "longitude": -73.9227848,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "website": "https://www.sunrisesunsetbk.com/",
+    "hours": "Mo-Fr 08:00-00:00; Sa-Su 00:00-01:00, 08:00-00:00",
+    "contact_source": "openstreetmap",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1017,7 +1255,13 @@
     "longitude": -73.9898326,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://tenbellsnyc.com",
+    "hours": "Mo-Fr 17:00-02:00, Sa-Su 15:00-02:00",
+    "contact_source": "openstreetmap",
+    "phone": "+1 212-228-4450",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1032,7 +1276,13 @@
     "longitude": -73.984535,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://www.tonchinus.com/",
+    "hours": "11:30-22:00",
+    "contact_source": "openstreetmap",
+    "phone": "+1 646-692-9912",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1047,7 +1297,13 @@
     "longitude": -73.9812369,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://www.vinegarhillhouse.com/",
+    "hours": "Mo-Th 17:30-21:30; Fr 17:30-22:00; Sa 10:00-15:00,17:30-22:00; Su 10:00-15:00,17:30-21:30",
+    "contact_source": "openstreetmap",
+    "email": "info@vinegarhillhouse.com",
+    "phone": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1062,7 +1318,9 @@
     "longitude": -73.9947443,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1077,7 +1335,9 @@
     "longitude": -73.6716944,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1092,7 +1352,9 @@
     "longitude": -74.0061832,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1107,7 +1369,13 @@
     "longitude": -73.9891428,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://wildair.nyc",
+    "hours": "Mo-Th, Su 18:00-23:00; Fr-Sa 18:00-23:30",
+    "contact_source": "openstreetmap",
+    "phone": "+1-646-964-5624",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1122,7 +1390,13 @@
     "longitude": -73.9433955,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact": "",
+    "website": "https://www.winsonbrooklyn.com",
+    "hours": "Tu-Sa 17:30-23:00; Su 17:30-22:00",
+    "contact_source": "openstreetmap",
+    "phone": "+1-347-457-6010",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1137,7 +1411,9 @@
     "longitude": -75.9860314,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1152,7 +1428,9 @@
     "longitude": -122.247171,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1167,7 +1445,9 @@
     "longitude": -118.4533952,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1182,7 +1462,9 @@
     "longitude": -117.2112173,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1197,7 +1479,9 @@
     "longitude": -118.2654762,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1212,7 +1496,9 @@
     "longitude": -118.523478,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1227,7 +1513,9 @@
     "longitude": -118.149094,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1242,7 +1530,9 @@
     "longitude": -118.2689001,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1257,7 +1547,9 @@
     "longitude": -122.3218414,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1272,7 +1564,9 @@
     "longitude": -118.2538588,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1287,7 +1581,9 @@
     "longitude": -122.4006019,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1302,7 +1598,9 @@
     "longitude": -122.4328492,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1317,7 +1615,9 @@
     "longitude": -118.2901366,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1332,7 +1632,9 @@
     "longitude": -119.6151279,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1347,7 +1649,9 @@
     "longitude": -117.2463702,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1362,7 +1666,9 @@
     "longitude": -121.983013,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1377,7 +1683,9 @@
     "longitude": -121.975656,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1392,7 +1700,9 @@
     "longitude": -117.8396655,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1407,7 +1717,9 @@
     "longitude": -118.2644072,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1422,7 +1734,9 @@
     "longitude": -122.0291588,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1437,7 +1751,9 @@
     "longitude": -122.8651779,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1452,7 +1768,9 @@
     "longitude": -118.3812172,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1467,7 +1785,9 @@
     "longitude": -118.3775509,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1482,7 +1802,9 @@
     "longitude": -118.2612896,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1497,7 +1819,9 @@
     "longitude": -117.7411934,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1512,7 +1836,9 @@
     "longitude": -117.1396457,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1527,7 +1853,9 @@
     "longitude": -118.2843624,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1542,7 +1870,9 @@
     "longitude": -118.0659221,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1557,7 +1887,9 @@
     "longitude": -118.2411057,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1572,7 +1904,9 @@
     "longitude": -118.242766,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1587,7 +1921,9 @@
     "longitude": -116.9117379,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1602,7 +1938,9 @@
     "longitude": -122.3905089,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1617,7 +1955,9 @@
     "longitude": -117.174179,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1632,7 +1972,9 @@
     "longitude": -117.0621977,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1647,7 +1989,9 @@
     "longitude": -122.4282827,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1662,7 +2006,9 @@
     "longitude": -118.3540217,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1677,7 +2023,9 @@
     "longitude": -118.132368,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1692,7 +2040,9 @@
     "longitude": -118.374752,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1707,7 +2057,9 @@
     "longitude": -117.9117579,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1722,7 +2074,9 @@
     "longitude": -118.2959672,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1737,7 +2091,9 @@
     "longitude": -117.6886343,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1752,7 +2108,9 @@
     "longitude": -117.0752028,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1767,7 +2125,9 @@
     "longitude": -117.0118326,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1782,7 +2142,9 @@
     "longitude": -122.3092565,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1797,7 +2159,9 @@
     "longitude": -117.6763549,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1812,7 +2176,9 @@
     "longitude": -118.0540064,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1827,7 +2193,9 @@
     "longitude": -118.2454369,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1842,7 +2210,9 @@
     "longitude": -118.2542208,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1857,7 +2227,9 @@
     "longitude": -118.3540217,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1872,7 +2244,9 @@
     "longitude": -118.2843323,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1887,7 +2261,9 @@
     "longitude": -122.2685368,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1902,7 +2278,9 @@
     "longitude": -74.0480457,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1917,7 +2295,9 @@
     "longitude": -74.6594508,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1932,7 +2312,9 @@
     "longitude": -74.0441346,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1947,7 +2329,9 @@
     "longitude": -76.9978869,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1962,7 +2346,9 @@
     "longitude": -77.0311988,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1977,7 +2363,9 @@
     "longitude": -77.0363849,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1992,7 +2380,9 @@
     "longitude": -77.0009364,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2007,7 +2397,9 @@
     "longitude": -77.0221267,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2022,7 +2414,9 @@
     "longitude": -71.0980988,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2037,7 +2431,9 @@
     "longitude": -71.0715364,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2052,7 +2448,9 @@
     "longitude": -71.089041,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2067,7 +2465,9 @@
     "longitude": -71.0824595,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2082,7 +2482,9 @@
     "longitude": -71.0596738,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2097,7 +2499,9 @@
     "longitude": -70.0943295,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2112,7 +2516,9 @@
     "longitude": -71.0997276,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2127,7 +2533,9 @@
     "longitude": -71.0686235,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2142,7 +2550,9 @@
     "longitude": -71.0464223,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2157,7 +2567,9 @@
     "longitude": -71.0834149,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2172,7 +2584,9 @@
     "longitude": -79.810576,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2187,7 +2601,9 @@
     "longitude": -80.2624673,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2202,7 +2618,9 @@
     "longitude": -81.0032971,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2217,7 +2635,9 @@
     "longitude": -82.4142296,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2232,7 +2652,9 @@
     "longitude": -73.1079005,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2247,6 +2669,8 @@
     "longitude": -73.1686361,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   }
 ]

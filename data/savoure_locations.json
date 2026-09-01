@@ -8,7 +8,7 @@
     "region": "US",
     "state": "NY",
     "venue_type": "market",
-    "contact": "+1 718-801-8400",
+    "contact": "",
     "website": "",
     "hours": "",
     "notes": "Listed as foragers DUMBO. Google: Foragers Market.",
@@ -16,7 +16,9 @@
     "longitude": -73.9887274,
     "source_url": "friend research — Savoure",
     "scraped_at": "2026-09-01T00:51:30.799565+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "+1 718-801-8400",
+    "email": ""
   },
   {
     "competitor": "Savoure",
@@ -27,7 +29,7 @@
     "region": "US",
     "state": "NY",
     "venue_type": "natural market",
-    "contact": "+1 212-420-1600",
+    "contact": "",
     "website": "",
     "hours": "Mon-Fri 7:30am-9:30pm; Sat 8am-9:30pm; Sun 8am-9pm",
     "notes": "Listed as life thyme market.",
@@ -35,7 +37,9 @@
     "longitude": -73.9990589,
     "source_url": "friend research — Savoure",
     "scraped_at": "2026-09-01T00:51:30.799565+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "+1 212-420-1600",
+    "email": ""
   },
   {
     "competitor": "Savoure",
@@ -46,7 +50,7 @@
     "region": "US",
     "state": "NY",
     "venue_type": "market",
-    "contact": "+1 518-828-3558",
+    "contact": "",
     "website": "",
     "hours": "Tue-Thu 10am-5pm; Fri-Sat 10am-6pm; Sun 10am-5pm; Mon closed",
     "notes": "Hudson, NY.",
@@ -54,7 +58,9 @@
     "longitude": -73.7946524,
     "source_url": "friend research — Savoure",
     "scraped_at": "2026-09-01T00:51:30.799565+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "+1 518-828-3558",
+    "email": ""
   },
   {
     "competitor": "Savoure",
@@ -65,7 +71,7 @@
     "region": "US",
     "state": "NY",
     "venue_type": "buttery",
-    "contact": "+1 347-789-3422",
+    "contact": "",
     "website": "",
     "hours": "",
     "notes": "Listed as & sons. Recent Google reviews suggest it may have closed — verify before outreach.",
@@ -73,7 +79,9 @@
     "longitude": -73.9533528,
     "source_url": "friend research — Savoure",
     "scraped_at": "2026-09-01T00:51:30.799565+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "+1 347-789-3422",
+    "email": ""
   },
   {
     "competitor": "Savoure",
@@ -84,7 +92,7 @@
     "region": "US",
     "state": "NY",
     "venue_type": "deli/market",
-    "contact": "+1 212-240-9410",
+    "contact": "",
     "website": "",
     "hours": "Mon-Fri 8am-8pm; Sat-Sun 9am-8pm",
     "notes": "Same address as Dimes Market.",
@@ -92,7 +100,9 @@
     "longitude": -73.9908127,
     "source_url": "friend research — Savoure",
     "scraped_at": "2026-09-01T00:51:30.799565+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "+1 212-240-9410",
+    "email": ""
   },
   {
     "competitor": "Savoure",
@@ -103,7 +113,7 @@
     "region": "US",
     "state": "NY",
     "venue_type": "market",
-    "contact": "+1 718-989-1022",
+    "contact": "",
     "website": "",
     "hours": "Mon-Fri 7:30am-7pm; Sat-Sun 8am-7pm",
     "notes": "",
@@ -111,7 +121,10 @@
     "longitude": -73.9628002,
     "source_url": "friend research — Savoure",
     "scraped_at": "2026-09-01T00:51:30.799565+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1 718-989-1022",
+    "email": ""
   },
   {
     "competitor": "Savoure",
@@ -122,15 +135,18 @@
     "region": "US",
     "state": "NY",
     "venue_type": "market",
-    "contact": "+1 718-928-7100",
-    "website": "",
-    "hours": "",
+    "contact": "",
+    "website": "https://www.leabrooklyn.com",
+    "hours": "Mo-Su 07:00-22:00",
     "notes": "",
     "latitude": 40.6394347,
     "longitude": -73.9680084,
     "source_url": "friend research — Savoure",
     "scraped_at": "2026-09-01T00:51:30.799565+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1 718-928-7100",
+    "email": ""
   },
   {
     "competitor": "Savoure",
@@ -141,15 +157,18 @@
     "region": "US",
     "state": "NY",
     "venue_type": "food coop",
-    "contact": "+1 718-622-0560",
-    "website": "",
+    "contact": "",
+    "website": "https://www.foodcoop.com",
     "hours": "Mon-Sat 8am-9pm; Sun 8am-8pm",
     "notes": "Member-only co-op — buying goes through receiving/purchasing committee.",
     "latitude": 40.6747295,
     "longitude": -73.976815,
     "source_url": "friend research — Savoure",
     "scraped_at": "2026-09-01T00:51:30.799565+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1 718-622-0560",
+    "email": ""
   },
   {
     "competitor": "Savoure",
@@ -160,7 +179,7 @@
     "region": "US",
     "state": "NY",
     "venue_type": "specialty foods",
-    "contact": "+1 347-915-1196",
+    "contact": "",
     "website": "",
     "hours": "",
     "notes": "",
@@ -168,7 +187,9 @@
     "longitude": -73.9688782,
     "source_url": "friend research — Savoure",
     "scraped_at": "2026-09-01T00:51:30.799565+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "+1 347-915-1196",
+    "email": ""
   },
   {
     "competitor": "Savoure",
@@ -179,15 +200,18 @@
     "region": "US",
     "state": "NY",
     "venue_type": "specialty grocery",
-    "contact": "+1 212-787-2000",
-    "website": "",
+    "contact": "",
+    "website": "https://zabars.com",
     "hours": "Mon-Sat 8am-7:30pm; Sun 9am-6pm",
     "notes": "",
     "latitude": 40.7849024,
     "longitude": -73.9796668,
     "source_url": "friend research — Savoure",
     "scraped_at": "2026-09-01T00:51:30.799565+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1 212-787-2000",
+    "email": ""
   },
   {
     "competitor": "Savoure",
@@ -199,14 +223,17 @@
     "state": "NY",
     "venue_type": "bar/venue",
     "contact": "",
-    "website": "",
+    "website": "https://publicrecords.nyc",
     "hours": "Thu 6-10pm; Fri 6pm-4am; Sat 10am-4am; Sun 10am-9pm; Mon-Wed closed",
     "notes": "",
     "latitude": 40.6821674,
     "longitude": -73.9863886,
     "source_url": "friend research — Savoure",
     "scraped_at": "2026-09-01T00:51:30.799565+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "contact_source": "openstreetmap",
+    "phone": "+1-347-529-4869",
+    "email": ""
   },
   {
     "competitor": "Savoure",
@@ -217,7 +244,7 @@
     "region": "US",
     "state": "CA",
     "venue_type": "bar",
-    "contact": "+1 213-290-6309",
+    "contact": "",
     "website": "https://tabularasabar.com",
     "hours": "",
     "notes": "",
@@ -225,7 +252,9 @@
     "longitude": -118.3014699,
     "source_url": "friend research — Savoure",
     "scraped_at": "2026-09-01T00:51:30.799565+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "+1 213-290-6309",
+    "email": ""
   },
   {
     "competitor": "Savoure",
@@ -236,7 +265,7 @@
     "region": "US",
     "state": "CA",
     "venue_type": "restaurant and market",
-    "contact": "+1 323-522-6106",
+    "contact": "",
     "website": "https://botanicarestaurant.com",
     "hours": "",
     "notes": "",
@@ -244,7 +273,9 @@
     "longitude": -118.2689001,
     "source_url": "friend research — Savoure",
     "scraped_at": "2026-09-01T00:51:30.799565+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "+1 323-522-6106",
+    "email": ""
   },
   {
     "competitor": "Savoure",
@@ -255,7 +286,7 @@
     "region": "US",
     "state": "CA",
     "venue_type": "to-go market",
-    "contact": "+1 323-284-8147",
+    "contact": "",
     "website": "https://sqirlla.com",
     "hours": "",
     "notes": "To-go market next door to Sqirl; stocks pantry goods, coffee, tea, beer and wine. sqirlla.com covers both.",
@@ -263,6 +294,8 @@
     "longitude": -118.2866953,
     "source_url": "friend research — Savoure",
     "scraped_at": "2026-09-01T00:51:30.799565+00:00",
-    "geocode_status": "resolved"
+    "geocode_status": "resolved",
+    "phone": "+1 323-284-8147",
+    "email": ""
   }
 ]

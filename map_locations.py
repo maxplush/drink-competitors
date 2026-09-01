@@ -10,6 +10,8 @@ import folium
 from branca.element import Element, MacroElement, Template
 from folium.plugins import MarkerCluster
 
+from scrapers.contact_fields import row_phone_email
+
 COMPETITOR_COLORS = {
     "NON": "#136f63",
     "Villbrygg": "#8a6b16",
@@ -207,15 +209,73 @@ REGION_LEVEL_CITIES = {
 }
 
 US_STATE_NAMES = {
-    "California",
-    "New York",
-    "Massachusetts",
-    "New Jersey",
-    "North Carolina",
-    "South Carolina",
-    "Vermont",
-    "District of Columbia",
+    "Alabama": "AL",
+    "Alaska": "AK",
+    "Arizona": "AZ",
+    "Arkansas": "AR",
+    "California": "CA",
+    "Colorado": "CO",
+    "Connecticut": "CT",
+    "Delaware": "DE",
+    "District of Columbia": "DC",
+    "Florida": "FL",
+    "Georgia": "GA",
+    "Hawaii": "HI",
+    "Idaho": "ID",
+    "Illinois": "IL",
+    "Indiana": "IN",
+    "Iowa": "IA",
+    "Kansas": "KS",
+    "Kentucky": "KY",
+    "Louisiana": "LA",
+    "Maine": "ME",
+    "Maryland": "MD",
+    "Massachusetts": "MA",
+    "Michigan": "MI",
+    "Minnesota": "MN",
+    "Mississippi": "MS",
+    "Missouri": "MO",
+    "Montana": "MT",
+    "Nebraska": "NE",
+    "Nevada": "NV",
+    "New Hampshire": "NH",
+    "New Jersey": "NJ",
+    "New Mexico": "NM",
+    "New York": "NY",
+    "North Carolina": "NC",
+    "North Dakota": "ND",
+    "Ohio": "OH",
+    "Oklahoma": "OK",
+    "Oregon": "OR",
+    "Pennsylvania": "PA",
+    "Rhode Island": "RI",
+    "South Carolina": "SC",
+    "South Dakota": "SD",
+    "Tennessee": "TN",
+    "Texas": "TX",
+    "Utah": "UT",
+    "Vermont": "VT",
+    "Virginia": "VA",
+    "Washington": "WA",
+    "West Virginia": "WV",
+    "Wisconsin": "WI",
+    "Wyoming": "WY",
 }
+
+US_STATE_ABBREVS = set(US_STATE_NAMES.values())
+
+# Rough bounding boxes: min_lat, max_lat, min_lng, max_lng
+STATE_BBOXES: dict[str, tuple[float, float, float, float]] = {
+    "NY": (40.49, 45.02, -79.76, -71.85),
+    "CA": (32.53, 42.01, -124.48, -114.13),
+    "VA": (36.54, 39.47, -83.68, -75.24),
+    "NJ": (38.93, 41.36, -75.56, -73.89),
+    "MA": (41.24, 42.89, -73.51, -69.86),
+    "PA": (39.72, 42.27, -80.52, -74.69),
+    "CT": (40.98, 42.05, -73.73, -71.79),
+}
+
+DOMESTIC_REGIONS = {"US", "USA", "UNITED STATES"}
 
 
 def city_from_address(address: str) -> str:
@@ -223,9 +283,12 @@ def city_from_address(address: str) -> str:
     if not address:
         return ""
     parts = [p.strip() for p in address.split(",") if p.strip()]
+    abbrev_set = US_STATE_ABBREVS | {"DC"}
+    name_set = set(US_STATE_NAMES) | {"New York"}
     state_idx = None
     for i, part in enumerate(parts):
-        if part in US_STATE_NAMES or part in {"CA", "NY", "MA", "NJ", "NC", "SC", "VT", "DC"}:
+        core = re.sub(r"\s+\d{5}(?:-\d{4})?$", "", part).strip()
+        if core in name_set or core in abbrev_set or part in name_set or part in abbrev_set:
             state_idx = i
             break
     if state_idx is None:
@@ -243,16 +306,87 @@ def city_from_address(address: str) -> str:
             continue
         if "Neighborhood Council" in part or "Council District" in part:
             continue
+        if re.match(r"^\d+\s", part):
+            continue
         return part
     return ""
 
 
+def _in_bbox(lat: float, lng: float, bbox: tuple[float, float, float, float]) -> bool:
+    min_lat, max_lat, min_lng, max_lng = bbox
+    return min_lat <= lat <= max_lat and min_lng <= lng <= max_lng
+
+
+def _state_from_address(address: str) -> str:
+    if not address:
+        return ""
+    match = re.search(r",\s*([A-Za-z]{2})(?:\s+\d{5}(?:-\d{4})?|\s*$)", address)
+    if match:
+        abbr = match.group(1).upper()
+        if abbr in US_STATE_ABBREVS:
+            return abbr
+    upper = address.upper()
+    for name, abbr in sorted(US_STATE_NAMES.items(), key=lambda kv: -len(kv[0])):
+        if name.upper() in upper:
+            return abbr
+    if re.search(r"NEW YORK\s+\d{5}", upper):
+        return "NY"
+    return ""
+
+
+def _state_from_coords(lat: float, lng: float) -> str:
+    for state, bbox in STATE_BBOXES.items():
+        if _in_bbox(lat, lng, bbox):
+            return state
+    return ""
+
+
+def _normalize_state(raw: str) -> str:
+    lower = raw.lower()
+    if lower in {"ny", "new york", "new york state"}:
+        return "NY"
+    if lower in {"ca", "california"}:
+        return "CA"
+    if lower in {"ma", "massachusetts"}:
+        return "MA"
+    if lower in {"nj", "new jersey"}:
+        return "NJ"
+    if lower in {"dc", "district of columbia", "washington dc", "washington, dc"}:
+        return "DC"
+    if lower in {"nc", "north carolina"}:
+        return "NC"
+    if lower in {"sc", "south carolina"}:
+        return "SC"
+    if lower in {"vt", "vermont"}:
+        return "VT"
+    if lower in {"va", "virginia"}:
+        return "VA"
+    if len(raw) == 2:
+        return raw.upper()
+    return US_STATE_NAMES.get(raw, raw)
+
+
 def _display_city(row: dict) -> str:
+    address = row.get("address") or ""
+    from_addr_city = city_from_address(address)
+    from_addr_state = _state_from_address(address)
+
     city = (row.get("suburb") or "").strip()
+    city_upper = city.upper()
+    lat, lng = row.get("latitude"), row.get("longitude")
+
+    if from_addr_state and from_addr_state != "NY" and from_addr_city:
+        return from_addr_city
+
+    if city_upper in NY_CITIES:
+        if lat is not None and lng is not None:
+            if not _in_bbox(float(lat), float(lng), STATE_BBOXES["NY"]) and from_addr_city:
+                return from_addr_city
+        return "New York" if city_upper == "NEW YORK" else city.title() if city.isupper() else city
+
     if city and city.lower() not in REGION_LEVEL_CITIES:
         return city
-    extracted = city_from_address(row.get("address") or "")
-    return extracted or city
+    return from_addr_city or city
 
 
 def _display_address(row: dict) -> str:
@@ -267,6 +401,71 @@ def _display_address(row: dict) -> str:
 
     parts = [p for p in (city, state or region) if p]
     return ", ".join(parts)
+
+
+def _display_area(row: dict) -> str:
+    """City / state / country — never a street address."""
+    city = _display_city(row)
+    state = _infer_state(row)
+    region = (row.get("region") or "").strip()
+    if state:
+        label = f"{city}, {state}" if city else state
+    elif region and region.upper() not in DOMESTIC_REGIONS:
+        label = f"{city}, {region}" if city else region
+    elif city:
+        label = city
+    else:
+        label = ""
+
+    address = _display_address(row).strip()
+    if label and address and label.lower() == address.lower():
+        return ""
+    return label
+
+
+def _infer_state(row: dict) -> str:
+    """Normalize/infer US state; avoid false NY matches for Albany AU, Glendale CA, etc."""
+    raw = (row.get("state") or "").strip()
+    if raw:
+        return _normalize_state(raw)
+
+    region = (row.get("region") or "").strip().upper()
+    if region and region not in DOMESTIC_REGIONS:
+        return ""
+
+    address = row.get("address") or ""
+    from_address = _state_from_address(address)
+    if from_address:
+        return from_address
+
+    lat, lng = row.get("latitude"), row.get("longitude")
+    if lat is not None and lng is not None:
+        from_coords = _state_from_coords(float(lat), float(lng))
+        if from_coords:
+            return from_coords
+
+    address_upper = address.upper()
+    if ", NY" in address_upper or re.search(r"\bNY\b", address_upper):
+        return "NY"
+    if "BROOKLYN" in address_upper or "QUEENS, NY" in address_upper:
+        return "NY"
+    if "NEW YORK, NEW YORK" in address_upper or re.search(r"NEW YORK\s+\d{5}", address_upper):
+        return "NY"
+
+    city = (row.get("suburb") or "").strip().upper()
+    if city in NY_CITIES:
+        if lat is not None and lng is not None:
+            ny_bbox = STATE_BBOXES["NY"]
+            if _in_bbox(float(lat), float(lng), ny_bbox):
+                return "NY"
+        elif region in DOMESTIC_REGIONS and any(
+            token in address_upper for token in ("NEW YORK", "BROOKLYN", "QUEENS", "BRONX", "MANHATTAN")
+        ):
+            return "NY"
+
+    if region == "NORWAY":
+        return ""
+    return ""
 
 
 NY_CITIES = {
@@ -321,68 +520,29 @@ NY_CITIES = {
     "LOWER EAST SIDE",
     "UPPER WEST SIDE",
     "UPPER EAST SIDE",
-    "HARLEM",
     "WASHINGTON HEIGHTS",
     "INWOOD",
 }
-
-
-def _infer_state(row: dict) -> str:
-    """Normalize/infer US state so NY includes Brooklyn, Queens, etc."""
-    raw = (row.get("state") or "").strip()
-    if raw:
-        lower = raw.lower()
-        if lower in {"ny", "new york", "new york state"}:
-            return "NY"
-        if lower in {"ca", "california"}:
-            return "CA"
-        if lower in {"ma", "massachusetts"}:
-            return "MA"
-        if lower in {"nj", "new jersey"}:
-            return "NJ"
-        if lower in {"dc", "district of columbia", "washington dc", "washington, dc"}:
-            return "DC"
-        if lower in {"nc", "north carolina"}:
-            return "NC"
-        if lower in {"sc", "south carolina"}:
-            return "SC"
-        if lower in {"vt", "vermont"}:
-            return "VT"
-        if len(raw) == 2:
-            return raw.upper()
-        return raw
-
-    city = (row.get("suburb") or "").strip().upper()
-    address = (row.get("address") or "").upper()
-    region = (row.get("region") or "").strip().upper()
-
-    if city in NY_CITIES:
-        return "NY"
-    if ", NY" in address or re.search(r"\bNY\b", address):
-        return "NY"
-    if "BROOKLYN" in address or "QUEENS, NY" in address:
-        return "NY"
-    if "NEW YORK, NEW YORK" in address or re.search(r"NEW YORK\s+\d{5}", address):
-        return "NY"
-
-    if region == "NORWAY":
-        return ""
-    return ""
 
 
 def build_dashboard(rows: list[dict]) -> str:
     """Static HTML dashboard: Map tab + searchable competitor database table."""
     table_rows = []
     for r in rows:
+        phone, email = row_phone_email(r)
         table_rows.append(
             {
                 "competitor": r.get("competitor") or "",
                 "name": r.get("name") or "",
                 "address": _display_address(r),
+                "area": _display_area(r),
                 "city": _display_city(r),
                 "region": r.get("region") or "",
                 "state": _infer_state(r),
                 "type": r.get("venue_type") or "",
+                "phone": phone,
+                "email": email,
+                "website": r.get("website") or "",
                 "lat": r.get("latitude"),
                 "lng": r.get("longitude"),
             }
@@ -537,37 +697,83 @@ def build_dashboard(rows: list[dict]) -> str:
     }}
 
     .table-wrap {{ flex: 1; overflow: auto; background: var(--panel); }}
-    table {{
+    table.db-table {{
       width: 100%; border-collapse: collapse;
-      font-size: 13.5px; background: var(--panel);
+      table-layout: fixed;
+      font-size: 12.5px; background: var(--panel);
     }}
+    table.db-table col.col-brand {{ width: 6.5%; }}
+    table.db-table col.col-name {{ width: 13%; }}
+    table.db-table col.col-address {{ width: 21%; }}
+    table.db-table col.col-area {{ width: 9%; }}
+    table.db-table col.col-type {{ width: 10%; }}
+    table.db-table col.col-phone {{ width: 11.5%; }}
+    table.db-table col.col-email {{ width: 14%; }}
+    table.db-table col.col-website {{ width: 12%; }}
+    table.db-table col.col-map {{ width: 3%; }}
     thead th {{
       position: sticky; top: 0; z-index: 1;
       background: var(--paper); text-align: left;
-      font-size: 12.5px; font-weight: 600; color: var(--ink-2);
-      padding: 10px 14px; border-bottom: 1px solid var(--rule);
+      font-size: 11.5px; font-weight: 600; color: var(--ink-2);
+      padding: 8px 10px; border-bottom: 1px solid var(--rule);
       white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }}
     tbody td {{
-      padding: 10px 14px; border-bottom: 1px solid var(--rule-soft);
+      padding: 8px 10px; border-bottom: 1px solid var(--rule-soft);
       vertical-align: top;
     }}
     tbody tr:hover {{ background: var(--hover); }}
     td.col-brand {{
-      font-size: 12.5px; color: var(--ink);
+      font-size: 11.5px; color: var(--ink);
       border-left: 3px solid transparent;
       white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }}
     tr.c-NON td.col-brand {{ border-left-color: var(--c-non); }}
     tr.c-Villbrygg td.col-brand {{ border-left-color: var(--c-vil); }}
     tr.c-Unified td.col-brand {{ border-left-color: var(--c-uni); }}
     tr.c-Prospects td.col-brand {{ border-left-color: var(--c-pro); }}
     tr.c-Savoure td.col-brand {{ border-left-color: var(--c-sav); }}
-    td.col-address {{
-      min-width: 240px; max-width: 400px;
-      white-space: normal; line-height: 1.4;
+    td.col-name {{
+      font-weight: 500;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }}
-    th.col-address {{ min-width: 240px; }}
+    td.col-address {{
+      white-space: normal; line-height: 1.35;
+      word-break: break-word;
+    }}
+    td.col-area,
+    td.col-type {{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: var(--ink-2);
+      font-size: 12px;
+    }}
+    td.col-phone, th.col-phone {{
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.02em;
+      font-size: 12px;
+      overflow: visible;
+    }}
+    td.col-email, td.col-website {{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 12px;
+    }}
+    td.col-email a, td.col-website a {{
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }}
     .name-cell {{ font-weight: 500; }}
     .name-cell .addr-sub,
     .name-cell .meta-line {{ display: none; }}
@@ -611,10 +817,11 @@ def build_dashboard(rows: list[dict]) -> str:
       }}
       td.col-brand,
       td.col-address,
-      td.col-city,
-      td.col-state,
-      td.col-region,
+      td.col-area,
       td.col-type,
+      td.col-phone,
+      td.col-email,
+      td.col-website,
       td.col-map {{ display: none; }}
       .name-cell .meta-line {{
         display: block; margin-top: 4px;
@@ -665,7 +872,7 @@ def build_dashboard(rows: list[dict]) -> str:
             </select>
           </label>
           <label class="field"><span>Search</span>
-            <input id="searchInput" type="search" placeholder="Name, address, city…" autocomplete="off" />
+            <input id="searchInput" type="search" placeholder="Name, address, phone, email…" autocomplete="off" />
           </label>
         </div>
         <div class="share">
@@ -679,16 +886,28 @@ def build_dashboard(rows: list[dict]) -> str:
           <div class="share-label"><strong id="shareN">0</strong> of {total:,} locations</div>
         </div>
         <div class="table-wrap">
-          <table>
+          <table class="db-table">
+            <colgroup>
+              <col class="col-brand" />
+              <col class="col-name" />
+              <col class="col-address" />
+              <col class="col-area" />
+              <col class="col-type" />
+              <col class="col-phone" />
+              <col class="col-email" />
+              <col class="col-website" />
+              <col class="col-map" />
+            </colgroup>
             <thead>
               <tr>
-                <th>Competitor</th>
+                <th>Brand</th>
                 <th>Name</th>
-                <th class="col-address">Street address</th>
-                <th>City</th>
-                <th>State</th>
-                <th>Region</th>
+                <th>Address</th>
+                <th>City / Region</th>
                 <th>Type</th>
+                <th class="col-phone">Phone</th>
+                <th>Email</th>
+                <th>Website</th>
                 <th></th>
               </tr>
             </thead>
@@ -772,6 +991,19 @@ def build_dashboard(rows: list[dict]) -> str:
       placeFilter.appendChild(opt);
     }});
 
+    function brandLabel(name) {{
+      const SHORT = {{
+        'Unified Ferments': 'UF',
+        'Researched Prospect Locations': 'Prospects',
+      }};
+      return SHORT[name] || name;
+    }}
+
+    function titleAttr(value) {{
+      if (!value) return '';
+      return ` title="${{escapeHtml(value)}}"`;
+    }}
+
     function rowClass(name) {{
       if (name === 'NON') return 'c-NON';
       if (name === 'Villbrygg') return 'c-Villbrygg';
@@ -800,7 +1032,7 @@ def build_dashboard(rows: list[dict]) -> str:
         }}
       }}
       if (!q) return true;
-      const hay = [row.competitor, row.name, row.address, row.city, row.state, row.region, row.type]
+      const hay = [row.competitor, row.name, row.address, row.area, row.city, row.state, row.region, row.type, row.phone, row.email, row.website]
         .join(' ').toLowerCase();
       return hay.includes(q);
     }}
@@ -862,16 +1094,34 @@ def build_dashboard(rows: list[dict]) -> str:
           ? `<a class="maps" href="https://www.google.com/maps?q=${{row.lat}},${{row.lng}}" target="_blank" rel="noopener">Map</a>`
           : '';
         const addr = escapeHtml(row.address || '');
-        const meta = [row.address, row.city, row.state, row.region, row.type]
+        const meta = [row.address, row.area, row.type, row.phone, row.email, row.website]
           .filter(Boolean).map(escapeHtml).join(' · ');
+        const phone = row.phone
+          ? `<span class="phone-num">${{escapeHtml(row.phone)}}</span>`
+          : '<span class="muted">—</span>';
+        let email = '<span class="muted">—</span>';
+        if (row.email) {{
+          if (row.email.includes('@') && !row.email.startsWith('@')) {{
+            email = `<a class="maps" href="mailto:${{escapeHtml(row.email)}}"${{titleAttr(row.email)}}>${{escapeHtml(row.email)}}</a>`;
+          }} else {{
+            email = `<span${{titleAttr(row.email)}}>${{escapeHtml(row.email)}}</span>`;
+          }}
+        }}
+        let website = '<span class="muted">—</span>';
+        if (row.website) {{
+          const url = row.website.startsWith('http') ? row.website : 'https://' + row.website;
+          const label = row.website.replace(/^https?:\\/\\//, '').replace(/\\/$/, '');
+          website = `<a class="maps" href="${{escapeHtml(url)}}" target="_blank" rel="noopener"${{titleAttr(row.website)}}>${{escapeHtml(label)}}</a>`;
+        }}
         return `<tr class="${{rowClass(row.competitor)}}">
-          <td class="col-brand">${{escapeHtml(row.competitor)}}</td>
-          <td class="name-cell">${{escapeHtml(row.name)}}<span class="meta-line">${{meta}}</span></td>
-          <td class="col-address">${{addr || '<span class="muted">—</span>'}}</td>
-          <td class="col-city">${{escapeHtml(row.city)}}</td>
-          <td class="col-state">${{escapeHtml(row.state)}}</td>
-          <td class="col-region">${{escapeHtml(row.region)}}</td>
-          <td class="col-type muted">${{escapeHtml(row.type)}}</td>
+          <td class="col-brand"${{titleAttr(row.competitor)}}>${{escapeHtml(brandLabel(row.competitor))}}</td>
+          <td class="name-cell col-name"${{titleAttr(row.name)}}>${{escapeHtml(row.name)}}<span class="meta-line">${{meta}}</span></td>
+          <td class="col-address"${{titleAttr(row.address)}}>${{addr || '<span class="muted">—</span>'}}</td>
+          <td class="col-area"${{titleAttr(row.area)}}>${{row.area ? escapeHtml(row.area) : '<span class="muted">—</span>'}}</td>
+          <td class="col-type muted"${{titleAttr(row.type)}}>${{escapeHtml(row.type) || '—'}}</td>
+          <td class="col-phone"${{titleAttr(row.phone)}}>${{phone}}</td>
+          <td class="col-email">${{email}}</td>
+          <td class="col-website">${{website}}</td>
           <td class="col-map">${{maps}}</td>
         </tr>`;
       }}).join('');
