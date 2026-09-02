@@ -545,6 +545,8 @@ def build_dashboard(rows: list[dict]) -> str:
                 "website": r.get("website") or "",
                 "lat": r.get("latitude"),
                 "lng": r.get("longitude"),
+                "verified": bool(r.get("verified")),
+                "needs_review": bool(r.get("needs_review")),
             }
         )
     payload = json.dumps(table_rows, ensure_ascii=False)
@@ -789,6 +791,38 @@ def build_dashboard(rows: list[dict]) -> str:
     }}
     a.maps:hover {{ color: var(--ink-2); }}
 
+    .name-with-badge {{
+      display: inline-flex; align-items: center; gap: 5px;
+      min-width: 0; max-width: 100%; vertical-align: top;
+    }}
+    .name-with-badge .name-text {{
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0;
+    }}
+    .verify-badge {{
+      flex: none; display: inline-flex; align-items: center; justify-content: center;
+      width: 17px; height: 17px; border-radius: 3px;
+      background: var(--ink); color: #fff; opacity: 0.9;
+    }}
+    .verify-badge svg {{
+      width: 11px; height: 11px; display: block;
+    }}
+    .review-badge {{
+      flex: none; font-size: 9px; font-weight: 600; letter-spacing: 0.03em;
+      padding: 2px 5px; border-radius: 3px;
+      background: #f4e4c8; color: #7a5c28; border: 1px solid #e0c99a;
+      line-height: 1.2;
+    }}
+    .legend-badges {{
+      display: flex; align-items: center; gap: 14px;
+      font-size: 12px; color: var(--ink-2); margin-left: auto;
+    }}
+    .legend-badges span {{
+      display: inline-flex; align-items: center; gap: 6px;
+    }}
+    tr.is-verified td.col-name .name-text {{
+      font-weight: 600;
+    }}
+
     .tab:focus-visible,
     .chip:focus-visible,
     .db-toolbar select:focus-visible,
@@ -874,6 +908,10 @@ def build_dashboard(rows: list[dict]) -> str:
           <label class="field"><span>Search</span>
             <input id="searchInput" type="search" placeholder="Name, address, phone, email…" autocomplete="off" />
           </label>
+          <div class="legend-badges" aria-hidden="false">
+            <span><span class="verify-badge" title="Hand-verified address"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 7V5a4 4 0 0 1 8 0v2h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1zm2-2a2 2 0 0 1 4 0v2H10V5zm-1 4H7v11h10V9h-2v1a1 1 0 0 1-2 0V9H11v1a1 1 0 0 1-2 0V9z"/></svg></span> Verified</span>
+            <span><span class="review-badge">review</span> Needs review</span>
+          </div>
         </div>
         <div class="share">
           <div class="share-bar" id="shareBar" aria-hidden="true">
@@ -1005,14 +1043,19 @@ def build_dashboard(rows: list[dict]) -> str:
       return ` title="${{escapeHtml(value)}}"`;
     }}
 
-    function rowClass(name) {{
-      if (name === 'NON') return 'c-NON';
-      if (name === 'Villbrygg') return 'c-Villbrygg';
-      if (name === 'Unified Ferments') return 'c-Unified';
-      if (name === 'Researched Prospect Locations') return 'c-Prospects';
-      if (name === 'Savoure') return 'c-Savoure';
-      return '';
+    function rowClass(name, row) {{
+      let cls = '';
+      if (name === 'NON') cls = 'c-NON';
+      else if (name === 'Villbrygg') cls = 'c-Villbrygg';
+      else if (name === 'Unified Ferments') cls = 'c-Unified';
+      else if (name === 'Researched Prospect Locations') cls = 'c-Prospects';
+      else if (name === 'Savoure') cls = 'c-Savoure';
+      if (row && row.verified) cls += ' is-verified';
+      if (row && row.needs_review) cls += ' needs-review';
+      return cls.trim();
     }}
+
+    const VERIFY_BADGE = `<span class="verify-badge" title="Hand-verified address" aria-label="Verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 7V5a4 4 0 0 1 8 0v2h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1zm2-2a2 2 0 0 1 4 0v2H10V5zm-1 4H7v11h10V9h-2v1a1 1 0 0 1-2 0V9H11v1a1 1 0 0 1-2 0V9z"/></svg></span>`;
 
     function escapeHtml(s) {{
       return String(s)
@@ -1033,7 +1076,8 @@ def build_dashboard(rows: list[dict]) -> str:
         }}
       }}
       if (!q) return true;
-      const hay = [row.competitor, row.name, row.address, row.area, row.city, row.state, row.region, row.type, row.phone, row.email, row.website]
+      const hay = [row.competitor, row.name, row.address, row.area, row.city, row.state, row.region, row.type, row.phone, row.email, row.website,
+        row.verified ? 'verified' : '', row.needs_review ? 'needs review' : '']
         .join(' ').toLowerCase();
       return hay.includes(q);
     }}
@@ -1114,9 +1158,14 @@ def build_dashboard(rows: list[dict]) -> str:
           const label = row.website.replace(/^https?:\\/\\//, '').replace(/\\/$/, '');
           website = `<a class="maps" href="${{escapeHtml(url)}}" target="_blank" rel="noopener"${{titleAttr(row.website)}}>${{escapeHtml(label)}}</a>`;
         }}
-        return `<tr class="${{rowClass(row.competitor)}}">
+        const verifiedBadge = row.verified ? VERIFY_BADGE : '';
+        const reviewBadge = row.needs_review && !row.verified
+          ? `<span class="review-badge" title="Address needs manual review">review</span>`
+          : '';
+        const nameHtml = `<span class="name-with-badge"><span class="name-text">${{escapeHtml(row.name)}}</span>${{verifiedBadge}}${{reviewBadge}}</span>`;
+        return `<tr class="${{rowClass(row.competitor, row)}}">
           <td class="col-brand"${{titleAttr(row.competitor)}}>${{escapeHtml(brandLabel(row.competitor))}}</td>
-          <td class="name-cell col-name"${{titleAttr(row.name)}}>${{escapeHtml(row.name)}}<span class="meta-line">${{meta}}</span></td>
+          <td class="name-cell col-name"${{titleAttr(row.name)}}>${{nameHtml}}<span class="meta-line">${{meta}}</span></td>
           <td class="col-address"${{titleAttr(row.address)}}>${{addr || '<span class="muted">—</span>'}}</td>
           <td class="col-area"${{titleAttr(row.area)}}>${{row.area ? escapeHtml(row.area) : '<span class="muted">—</span>'}}</td>
           <td class="col-type muted"${{titleAttr(row.type)}}>${{escapeHtml(row.type) || '—'}}</td>
@@ -1145,13 +1194,36 @@ def build_dashboard(rows: list[dict]) -> str:
 
 
 def main() -> None:
+    from scrapers.location_merge import count_verified, count_verified_in_dashboard
+
     rows = load_locations()
     if not rows:
         raise SystemExit(f"No *_locations.json files found in {DATA_DIR}. Run a scraper first.")
+
+    json_verified = count_verified(rows)
+    dashboard_verified_before = count_verified_in_dashboard(OUT_DASHBOARD)
+    print(
+        f"verified count: JSON={json_verified}, dashboard (before)={dashboard_verified_before}"
+    )
+    if json_verified < dashboard_verified_before:
+        raise SystemExit(
+            "Refusing to regenerate dashboard: verified row count in JSON "
+            f"({json_verified}) is below embedded dashboard ({dashboard_verified_before})."
+        )
+
     m = build_map(rows)
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     m.save(str(OUT_HTML))
     OUT_DASHBOARD.write_text(build_dashboard(rows), encoding="utf-8")
+
+    dashboard_verified_after = count_verified_in_dashboard(OUT_DASHBOARD)
+    print(
+        f"verified count after embed: JSON={json_verified}, dashboard={dashboard_verified_after}"
+    )
+    if dashboard_verified_after < dashboard_verified_before:
+        raise SystemExit(
+            "Dashboard embed verified count dropped after write — file left inconsistent."
+        )
     by_comp: dict[str, int] = {}
     for row in rows:
         c = row.get("competitor") or "?"

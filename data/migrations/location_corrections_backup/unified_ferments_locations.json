@@ -16,9 +16,7 @@
     "contact": "",
     "website": "https://aitaclintonhill.com",
     "phone": "(718) 576-3584",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -36,51 +34,41 @@
     "geocode_status": "resolved",
     "phone": "(646) 876-1054",
     "email": "",
-    "website": "https://alisonny.com",
-    "verified": false,
-    "needs_review": false
+    "website": "https://alisonny.com"
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "AMAN NEW YORK",
-    "address": "730 5th Avenue, Manhattan, NY, 10019",
-    "suburb": "Manhattan",
+    "address": "Aman Drive, North Spencer, Town of Spencer, Tioga County, New York, 14883, United States",
+    "suburb": "Town of Spencer",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.762807,
-    "longitude": -73.9743058,
+    "latitude": 42.2527834,
+    "longitude": -76.5095771,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "needs_review": false,
-    "verified": true
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "AS IS",
-    "address": "734 10th Avenue, Manhattan, NY, 10019",
-    "suburb": "Manhattan",
+    "address": "As You Were Island, Town of Bolton, Warren County, New York, United States",
+    "suburb": "Town of Bolton",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.7647224,
-    "longitude": -73.9915392,
+    "latitude": 43.5838675,
+    "longitude": -73.5944812,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "needs_review": true,
-    "staging_address": "",
-    "staging_city": "",
-    "staging_confidence": 0.0,
-    "staging_provider": "",
-    "verified": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -97,12 +85,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "reservations@askanyc.com",
-    "verified": false,
-    "needs_review": false,
-    "website": "https://askanyc.com",
-    "email_source": "verified_seed",
-    "email_source_url": "https://askanyc.com/contact"
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -123,9 +106,7 @@
     "hours": "17:00-21:00; Fr,Sa 17:00-22:00",
     "contact_source": "openstreetmap",
     "phone": "+1-646-476-7217",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -142,50 +123,41 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "BAR MERIDIAN",
-    "address": "406 Prospect Place, Brooklyn, NY, 11238",
-    "suburb": "Brooklyn",
+    "address": "Bartow Avenue, New York, New York, 10475, United States",
+    "suburb": "Bartow Avenue",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.6762855,
-    "longitude": -73.9630852,
+    "latitude": 40.8695328,
+    "longitude": -73.8296186,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "needs_review": false,
-    "verified": true,
-    "website": "https://barmeridian.com",
-    "email_source": "verified_seed",
-    "email_needs_headless": true
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "A BATHHOUSE",
-    "address": "103 North 10th Street, Brooklyn, NY, 11249",
-    "suburb": "Brooklyn",
+    "address": "Oriental Boulevard, New York, New York, 11235, United States",
+    "suburb": "Oriental Boulevard",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.7205182,
-    "longitude": -73.9574036,
+    "latitude": 40.5769738,
+    "longitude": -73.9443552,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "needs_review": false,
-    "verified": true
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -202,21 +174,19 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "BLANCA",
-    "address": "261 Moore Street, Brooklyn, NY, 11206",
+    "address": "Casa Blanca Hotel, 143, Park Avenue, Fort Greene, Brooklyn, Kings County, New York, 11205, United States",
     "suburb": "Brooklyn",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.7050062,
-    "longitude": -73.9335894,
+    "latitude": 40.6964268,
+    "longitude": -73.9738403,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
@@ -224,9 +194,7 @@
     "website": "https://casablancahotelbrooklyn.com",
     "contact_source": "openstreetmap",
     "phone": "+1-718-568-0758",
-    "email": "",
-    "needs_review": false,
-    "verified": true
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -245,9 +213,7 @@
     "contact": "",
     "website": "https://bonniesbrooklyn.com",
     "phone": "(914) 875-3709",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -266,9 +232,7 @@
     "hours": "Mo-Th 12:00-21:00; Fr-Sa 12:00-22:00; Su 12:00-21:00",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -285,9 +249,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -304,9 +266,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -323,31 +283,24 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "CHERRY ON TOP",
-    "address": "379 Suydam Street, Brooklyn, NY, 11237",
-    "suburb": "Brooklyn",
+    "address": "Cornwall, New York, 12520, United States",
+    "suburb": "Cornwall",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.7049007,
-    "longitude": -73.9213539,
+    "latitude": 41.442147,
+    "longitude": -74.0135868,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "hello@cherryontopnyc.com",
-    "needs_review": false,
-    "verified": true,
-    "website": "https://cherryontopnyc.com",
-    "email_source": "verified_seed",
-    "email_source_url": "https://cherryontopnyc.com/contact"
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -364,9 +317,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -387,9 +338,7 @@
     "hours": "Mo-Th 12:00-21:00; Fr 12:00-22:00; Sa 10:00-22:00; Su 10:00-21:00",
     "contact_source": "openstreetmap",
     "phone": "+1-917-261-7430",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -406,9 +355,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -425,27 +372,23 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "contact": "",
-    "website": "https://covenhovennyc.com",
+    "website": "https://www.covenhovennyc.com",
     "hours": "Mo-Fr 14:00-23:00; Sa-Su 12:00-23:00",
     "contact_source": "openstreetmap",
     "phone": "+1-718-483-9950",
-    "email": "covenhoven@gmail.com",
-    "verified": false,
-    "needs_review": false,
-    "email_source": "verified_seed",
-    "email_source_url": "https://covenhovennyc.com/contact"
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "CROWN SHY",
-    "address": "70 Pine Street, Manhattan, NY, 10005",
+    "address": "Crown Shy, 70, Pine Street, Financial District, Lower Manhattan, Manhattan, New York County, New York, 10005, United States",
     "suburb": "Manhattan",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.7064733,
-    "longitude": -74.0077415,
+    "latitude": 40.706227,
+    "longitude": -74.0075097,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
@@ -454,9 +397,7 @@
     "hours": "17:30-24:00",
     "contact_source": "openstreetmap",
     "phone": "+1-212-517-1932",
-    "email": "",
-    "needs_review": false,
-    "verified": true
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -473,9 +414,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -495,9 +434,7 @@
     "hours": "Mo-Fr 08:00-16:00; Sa-Su 09:00-17:00 \"cafe\"||We-Sa 16:00-23:00 \"bar\"",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -514,9 +451,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -537,51 +472,41 @@
     "hours": "Mo-We 17:30-22:00; Th-Su 12:00-13:00, 17:30-22:00",
     "contact_source": "openstreetmap",
     "phone": "+1 212-889-0905",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "EXTRA EXTRA PIZZA",
-    "address": "549 West Utica Street, Buffalo, NY, 14213",
-    "suburb": "Buffalo",
+    "address": "New York, New York, 10012, United States",
+    "suburb": "New York",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 42.9114879,
-    "longitude": -78.8871705,
+    "latitude": 40.7248417,
+    "longitude": -73.9915054,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "needs_review": true,
-    "staging_address": "",
-    "staging_city": "",
-    "staging_confidence": 0.0,
-    "staging_provider": "",
-    "verified": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "THE FLY",
-    "address": "549 Classon Avenue, Brooklyn, NY, 11238",
-    "suburb": "Brooklyn",
+    "address": "The Fly, Town of Unadilla, Otsego County, New York, 13849, United States",
+    "suburb": "Town of Unadilla",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.682011,
-    "longitude": -73.9584752,
+    "latitude": 42.3539692,
+    "longitude": -75.2915623,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "needs_review": false,
-    "verified": true
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -598,9 +523,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -616,54 +539,45 @@
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
-    "website": "https://fourhorsemenbk.com",
+    "website": "https://www.fourhorsemenbk.com",
     "hours": "Mo-Th 17:30-22:45; Fr-Su 11:00-15:30,17:30-22:45",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "info@fourhorsemenbk.com",
-    "verified": false,
-    "needs_review": false,
-    "email_source": "verified_seed",
-    "email_source_url": "https://fourhorsemenbk.com/contact"
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "FORT DEFIANCE",
-    "address": "354 Van Brunt Street, Brooklyn, NY, 11231",
-    "suburb": "Brooklyn",
+    "address": "Fort Defiance Hill, Town of Philipstown, Putnam County, New York, 10524, United States",
+    "suburb": "Town of Philipstown",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.6778808,
-    "longitude": -74.0125594,
+    "latitude": 41.377316,
+    "longitude": -73.9029149,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "needs_review": false,
-    "verified": true,
-    "status": "closed_or_changed"
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "FULGURANCES LAUNDROMAT",
-    "address": "132 Franklin Street, Brooklyn, NY, 11222",
-    "suburb": "Brooklyn",
+    "address": "Austin Boulevard, Barnum Island, New York, 11558, United States",
+    "suburb": "Barnum Island",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.7294287,
-    "longitude": -73.9573184,
+    "latitude": 40.6022587,
+    "longitude": -73.6518818,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "needs_review": false,
-    "verified": true
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -683,9 +597,7 @@
     "hours": "We-Sa 09:00-21:00; Su 09:00-18:00",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -705,16 +617,14 @@
     "hours": "Mo, We-Su 08:00-16:00",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "The Getaway 151",
     "address": "743 Riverside Dr, New York, NY 10031, USA",
-    "suburb": "Manhattan",
+    "suburb": "743 Riverside Dr",
     "region": "US",
     "state": "NY",
     "venue_type": "",
@@ -724,31 +634,24 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "needs_review": false,
-    "verified": true
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "HANA MAKGEOLLI",
-    "address": "201 Dupont Street, Brooklyn, NY, 11222",
-    "suburb": "Brooklyn",
+    "address": "524, 86th Street, New York, New York, 11209, United States",
+    "suburb": "86th Street",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.736437,
-    "longitude": -73.9515106,
+    "latitude": 40.6209733,
+    "longitude": -74.0256871,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "contact@hanamakgeolli.com",
-    "needs_review": false,
-    "verified": true,
-    "website": "https://hanamakgeolli.com",
-    "email_source": "verified_seed",
-    "email_source_url": "https://hanamakgeolli.com/contact"
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -767,9 +670,7 @@
     "hours": "Mo-Th 17:00-02:00; Fr 17:00-03:00; Sa 14:00-03:00; Su 14:00-02:00",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -790,9 +691,7 @@
     "hours": "We 17:30-22:00; Th-Sa 17:30-24:00; Su 17:30-22:00",
     "contact_source": "openstreetmap",
     "phone": "+1-718-855-2620",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -813,16 +712,14 @@
     "hours": "Mo-Th 17:00-24:00; Fr 17:00-01:00; Sa 14:00-01:00; Su 14:00-24:00",
     "contact_source": "openstreetmap",
     "phone": "+1-917-909-0434",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "KINDRED FARE",
-    "address": "512 Hamilton Street, Geneva, NY, 14456",
-    "suburb": "Geneva",
+    "address": "Kindred Fare, 512, Hamilton Street, Lenox Park, Town of Geneva, Ontario County, New York, 14456, United States",
+    "suburb": "Town of Geneva",
     "region": "US",
     "state": "NY",
     "venue_type": "",
@@ -836,13 +733,7 @@
     "hours": "Mo-Su 17:00-21:00",
     "contact_source": "openstreetmap",
     "phone": "+1 315-787-0400",
-    "email": "",
-    "needs_review": true,
-    "staging_address": "",
-    "staging_city": "",
-    "staging_confidence": 0.0,
-    "staging_provider": "",
-    "verified": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -862,15 +753,13 @@
     "website": "https://www.lavarany.com",
     "contact_source": "openstreetmap",
     "phone": "+1-718-422-0065",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "LIL DEB’S OASIS",
-    "address": "747 Columbia Street, City of Hudson, NY, 12534",
+    "address": "Lil' Deb's Oasis, 747, Columbia Street, Oakdale, City of Hudson, Columbia County, New York, 12534, United States",
     "suburb": "City of Hudson",
     "region": "US",
     "state": "NY",
@@ -884,13 +773,7 @@
     "website": "https://www.lildebsoasis.com/",
     "contact_source": "openstreetmap",
     "phone": "+1-518-828-4307",
-    "email": "",
-    "needs_review": false,
-    "staging_address": "",
-    "staging_city": "",
-    "staging_confidence": 0.0,
-    "staging_provider": "",
-    "verified": true
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -907,14 +790,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "needs_review": true,
-    "staging_address": "",
-    "staging_city": "",
-    "staging_confidence": 0.0,
-    "staging_provider": "",
-    "staging_note": "unconfirmed match — manual review required",
-    "verified": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -931,9 +807,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -953,21 +827,19 @@
     "hours": "Mo-Fr 12:00-20:00; Sa 12:00-19:00; Su 12:00-18:00",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "MISSION CHINESE",
-    "address": "45 Mott Street, Manhattan, NY, 10013",
+    "address": "Oversea Chinese Mission, Elizabeth Street, Chinatown, Lower Manhattan, Manhattan, New York County, New York, 10013, United States",
     "suburb": "Manhattan",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.7152913,
-    "longitude": -73.9989217,
+    "latitude": 40.7174558,
+    "longitude": -73.9966096,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
@@ -975,9 +847,7 @@
     "hours": "Su, Tu-We 17:00-22:00; Th-Sa 17:00-23:00",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "needs_review": false,
-    "verified": true
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -996,16 +866,14 @@
     "website": "https://www.missadanyc.com",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "MOONFLOWER",
-    "address": "201 West 11th Street, Manhattan, NY 10014, USA",
-    "suburb": "Manhattan",
+    "address": "201 W 11th St, New York, NY 10014, USA",
+    "suburb": "201 W 11th St",
     "region": "US",
     "state": "NY",
     "venue_type": "",
@@ -1015,40 +883,36 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "needs_review": true,
-    "verified": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "NARO",
-    "address": "610 5th Avenue, Manhattan, NY, 10020",
-    "suburb": "Manhattan",
+    "address": "Naro Lane, Kings Park, Town of Smithtown, Suffolk County, New York, 11768, United States",
+    "suburb": "Town of Smithtown",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.7581247,
-    "longitude": -73.9777361,
+    "latitude": 40.8868233,
+    "longitude": -73.278306,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "needs_review": false,
-    "verified": true
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "NICHE NICHE",
-    "address": "43 MacDougal St, New York, NY 10011, USA",
-    "suburb": "New York",
+    "address": "The Niche Shop, 2206, Broadway, Upper West Side, Manhattan Community Board 7, Manhattan, New York County, New York, 10024, United States",
+    "suburb": "Manhattan",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.72842,
-    "longitude": -74.00158,
+    "latitude": 40.7833108,
+    "longitude": -73.9800404,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
@@ -1057,9 +921,7 @@
     "hours": "Mo-Sa 12:00-19:00; Su 12:00-18:00",
     "contact_source": "openstreetmap",
     "phone": "+1-646-370-4146",
-    "email": "",
-    "needs_review": false,
-    "verified": true
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1079,28 +941,24 @@
     "hours": "Tu-Th 17:30-22:00; Fr-Sa 17:30-22:30",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "ODDLY ENOUGH",
-    "address": "397 Tompkins Ave, Brooklyn, NY 11216, USA",
-    "suburb": "Brooklyn",
+    "address": "Bartow Avenue, New York, New York, 10475, United States",
+    "suburb": "Bartow Avenue",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.68312,
-    "longitude": -73.94204,
+    "latitude": 40.8695328,
+    "longitude": -73.8296186,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "needs_review": false,
-    "verified": true
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1119,54 +977,41 @@
     "website": "https://www.ostudiony.com/ocafe",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "PEARL STREET SUPPER CLUB",
-    "address": "147 Front Street, Brooklyn, NY, 11201",
-    "suburb": "Brooklyn",
+    "address": "641, Hudson Street, New York, New York, 10014, United States",
+    "suburb": "Hudson Street",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.7025413,
-    "longitude": -73.9869796,
+    "latitude": 40.7390218,
+    "longitude": -74.0056634,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "needs_review": true,
-    "staging_address": "",
-    "staging_city": "",
-    "staging_confidence": 0.0,
-    "staging_provider": "",
-    "verified": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "PEOPLE’S WINE",
-    "address": "115 Delancey Street, Manhattan, NY, 10002",
-    "suburb": "Manhattan",
+    "address": "801, Halsey Street, New York, New York, 11233, United States",
+    "suburb": "Halsey Street",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.7179878,
-    "longitude": -73.9882622,
+    "latitude": 40.6852684,
+    "longitude": -73.9206036,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "delivery@peoples.wine",
-    "needs_review": false,
-    "verified": true,
-    "website": "https://peoples.wine",
-    "email_source": "verified_seed",
-    "email_source_url": "https://peoples.wine/contact"
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1185,28 +1030,24 @@
     "website": "https://www.pinchchinese.com/",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "RHODORA WINE BAR",
-    "address": "197 Adelphi Street, Brooklyn, NY, 11205",
-    "suburb": "Brooklyn",
+    "address": "5435, NY-14,Dundee ,NY 14837,USA, Milo, New York, 14527, United States",
+    "suburb": "Milo",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.6917428,
-    "longitude": -73.9714335,
+    "latitude": 42.5002192,
+    "longitude": -76.9240342,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "needs_review": false,
-    "verified": true
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1226,9 +1067,7 @@
     "hours": "Tu-Th 17:00-24:00; Fr 17:00-01:00; Sa 16:00-01:00; Su 16:00-24:00",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1247,50 +1086,41 @@
     "hours": "Mo-Fr 11:00-24:00;Sa-Su 10:00-24:00",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "RUFFIAN",
-    "address": "125 East 7th Street, Manhattan, NY, 10009",
-    "suburb": "Manhattan",
+    "address": "Ruffian Road, Elmont, Town of Hempstead, Nassau County, New York, 11003, United States",
+    "suburb": "Town of Hempstead",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.7265409,
-    "longitude": -73.9840094,
+    "latitude": 40.7111638,
+    "longitude": -73.7105271,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "ruffiannyc@gmail.com",
-    "needs_review": false,
-    "verified": true,
-    "website": "https://ruffiannyc.com",
-    "email_source": "verified_seed",
-    "email_source_url": "https://ruffiannyc.com/contact"
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "SAGA",
-    "address": "70 Pine St, 63rd Floor, New York, NY 10005, USA",
-    "suburb": "Manhattan",
+    "address": "Hair Saga, 4210, Union Road, Buffalo, Erie County, New York, 14225, United States",
+    "suburb": "Buffalo",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.7064733,
-    "longitude": -74.0077415,
+    "latitude": 42.9293563,
+    "longitude": -78.7548407,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
-    "phone": "(212) 339-3963",
-    "email": "",
-    "needs_review": false,
-    "verified": true
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1311,10 +1141,7 @@
     "hours": "Mo-Su 17:00-21:30",
     "contact_source": "openstreetmap",
     "phone": "+1-347-987-3710",
-    "email": "",
-    "status": "closed_or_changed",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1334,28 +1161,24 @@
     "website": "https://www.sistersbklyn.com",
     "contact_source": "openstreetmap",
     "phone": "+1-347-763-2537",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "SOMM TIME",
-    "address": "254 Broome Street, Manhattan, NY, 10002",
-    "suburb": "Manhattan",
+    "address": "Liberty, New York, 12768, United States",
+    "suburb": "Liberty",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.7182064,
-    "longitude": -73.9899202,
+    "latitude": 41.8664547,
+    "longitude": -74.7649311,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "needs_review": false,
-    "verified": true
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1376,9 +1199,7 @@
     "hours": "Mo-Su 12:00-20:00",
     "contact_source": "openstreetmap",
     "phone": "+1-929-277-2520",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1398,9 +1219,7 @@
     "hours": "Mo-Fr 08:00-00:00; Sa-Su 00:00-01:00, 08:00-00:00",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1421,9 +1240,7 @@
     "hours": "Mo-Fr 17:00-02:00, Sa-Su 15:00-02:00",
     "contact_source": "openstreetmap",
     "phone": "+1 212-228-4450",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1444,9 +1261,7 @@
     "hours": "11:30-22:00",
     "contact_source": "openstreetmap",
     "phone": "+1 646-692-9912",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1467,28 +1282,58 @@
     "hours": "Mo-Th 17:30-21:30; Fr 17:30-22:00; Sa 10:00-15:00,17:30-22:00; Su 10:00-15:00,17:30-21:30",
     "contact_source": "openstreetmap",
     "email": "info@vinegarhillhouse.com",
-    "phone": "",
-    "verified": false,
-    "needs_review": false
+    "phone": ""
   },
   {
     "competitor": "Unified Ferments",
     "source_id": "",
     "name": "WEN WEN",
-    "address": "1025 Manhattan Avenue, Brooklyn, NY, 11222",
+    "address": "Wen Xin Restaurant, 7218, 18th Avenue, New Utrecht, Brooklyn, Kings County, New York, 11204, United States",
     "suburb": "Brooklyn",
     "region": "US",
     "state": "NY",
     "venue_type": "",
-    "latitude": 40.7339722,
-    "longitude": -73.9551308,
+    "latitude": 40.6148181,
+    "longitude": -73.9947443,
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "needs_review": false,
-    "verified": true
+    "email": ""
+  },
+  {
+    "competitor": "Unified Ferments",
+    "source_id": "",
+    "name": "WHITE TIGER",
+    "address": "White Tiger Taekwondo, Hillside Avenue, Hillside Manor, Herricks, Town of North Hempstead, Nassau County, New York, 11040, United States",
+    "suburb": "Town of North Hempstead",
+    "region": "US",
+    "state": "NY",
+    "venue_type": "",
+    "latitude": 40.7518475,
+    "longitude": -73.6716944,
+    "source_url": "https://unifiedferments.com/FIND-US",
+    "scraped_at": "2026-08-31T21:28:01.706216+00:00",
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
+  },
+  {
+    "competitor": "Unified Ferments",
+    "source_id": "",
+    "name": "WHITE TIGER TAVERN",
+    "address": "567, Hudson Street, New York, New York, 10014, United States",
+    "suburb": "Hudson Street",
+    "region": "US",
+    "state": "NY",
+    "venue_type": "",
+    "latitude": 40.7356943,
+    "longitude": -74.0061832,
+    "source_url": "https://unifiedferments.com/FIND-US",
+    "scraped_at": "2026-08-31T21:28:01.706216+00:00",
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1509,9 +1354,7 @@
     "hours": "Mo-Th, Su 18:00-23:00; Fr-Sa 18:00-23:30",
     "contact_source": "openstreetmap",
     "phone": "+1-646-964-5624",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1532,9 +1375,24 @@
     "hours": "Tu-Sa 17:30-23:00; Su 17:30-22:00",
     "contact_source": "openstreetmap",
     "phone": "+1-347-457-6010",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
+  },
+  {
+    "competitor": "Unified Ferments",
+    "source_id": "",
+    "name": "WINONA’S",
+    "address": "Winona, Town of Lorraine, Jefferson County, New York, 13674, United States",
+    "suburb": "Town of Lorraine",
+    "region": "US",
+    "state": "NY",
+    "venue_type": "",
+    "latitude": 43.7189571,
+    "longitude": -75.9860314,
+    "source_url": "https://unifiedferments.com/FIND-US",
+    "scraped_at": "2026-08-31T21:28:01.706216+00:00",
+    "geocode_status": "resolved",
+    "phone": "",
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1551,9 +1409,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1570,9 +1426,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1589,9 +1443,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1608,9 +1460,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1627,9 +1477,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1646,9 +1494,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1665,9 +1511,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1684,9 +1528,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1703,9 +1545,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1722,9 +1562,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1741,9 +1579,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1760,9 +1596,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1779,9 +1613,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1798,9 +1630,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1817,9 +1647,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1836,9 +1664,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1855,9 +1681,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1874,9 +1698,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1893,9 +1715,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1912,9 +1732,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1931,9 +1749,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1950,9 +1766,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1969,9 +1783,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1988,9 +1800,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2007,9 +1817,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2026,9 +1834,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2045,9 +1851,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2064,9 +1868,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2083,9 +1885,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2102,9 +1902,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2121,9 +1919,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2141,9 +1937,7 @@
     "geocode_status": "resolved",
     "phone": "(323) 665-5656",
     "email": "",
-    "website": "https://lolowinebar.com",
-    "verified": false,
-    "needs_review": false
+    "website": "https://lolowinebar.com"
   },
   {
     "competitor": "Unified Ferments",
@@ -2160,9 +1954,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2179,9 +1971,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2198,9 +1988,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2217,9 +2005,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2236,9 +2022,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2255,9 +2039,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2274,9 +2056,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2293,9 +2073,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2312,9 +2090,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2331,9 +2107,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2350,9 +2124,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2369,9 +2141,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2388,9 +2158,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2407,9 +2175,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2426,9 +2192,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2445,9 +2209,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2464,9 +2226,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2483,9 +2243,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2502,9 +2260,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2521,9 +2277,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2540,9 +2294,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2559,9 +2311,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2578,9 +2328,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2597,9 +2345,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2616,9 +2362,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2635,9 +2379,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2654,9 +2396,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2673,9 +2413,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2692,9 +2430,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2711,9 +2447,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2730,9 +2464,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2749,9 +2481,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2768,9 +2498,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2787,9 +2515,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2806,9 +2532,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2825,9 +2549,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2844,9 +2566,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2863,9 +2583,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2882,9 +2600,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2901,9 +2617,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2920,9 +2634,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2939,8 +2651,6 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   }
 ]

@@ -121,6 +121,8 @@ def apply_address_overrides(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
         key = (row.get("name") or "").strip().upper()
         if key not in overrides:
             continue
+        if row.get("verified"):
+            continue
         patch = overrides[key]
         row["address"] = patch["address"]
         if patch.get("suburb"):
@@ -159,6 +161,7 @@ def save(rows: list[dict[str, Any]], out_dir: Path) -> tuple[Path, Path]:
         "source_id",
         "name",
         "address",
+        "scraped_address",
         "suburb",
         "region",
         "venue_type",
@@ -166,9 +169,26 @@ def save(rows: list[dict[str, Any]], out_dir: Path) -> tuple[Path, Path]:
         "longitude",
         "source_url",
         "scraped_at",
+        "state",
+        "verified",
+        "needs_review",
+        "phone",
+        "email",
+        "website",
+        "contact",
+        "hours",
+        "contact_source",
+        "geocode_status",
+        "notes",
     ]
+    seen: set[str] = set()
+    for row in rows:
+        for key in row:
+            if key not in seen:
+                seen.add(key)
+                fieldnames.append(key)
     with csv_path.open("w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -177,7 +197,19 @@ def save(rows: list[dict[str, Any]], out_dir: Path) -> tuple[Path, Path]:
 
 def main() -> None:
     root = Path(__file__).resolve().parents[1]
-    rows = scrape()
+    json_path = root / "data" / "non_locations.json"
+
+    from scrapers.location_merge import (
+        apply_verified_and_review_flags,
+        load_json_rows,
+        merge_scraped_into_existing,
+        non_row_key,
+    )
+
+    existing = load_json_rows(json_path)
+    scraped = scrape()
+    rows = merge_scraped_into_existing(existing, scraped, non_row_key)
+    rows = apply_verified_and_review_flags(rows)
     json_path, csv_path = save(rows, root / "data")
     regions: dict[str, int] = {}
     for row in rows:

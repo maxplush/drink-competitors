@@ -16,9 +16,7 @@
     "contact": "",
     "website": "https://aitaclintonhill.com",
     "phone": "(718) 576-3584",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -36,9 +34,7 @@
     "geocode_status": "resolved",
     "phone": "(646) 876-1054",
     "email": "",
-    "website": "https://alisonny.com",
-    "verified": false,
-    "needs_review": false
+    "website": "https://alisonny.com"
   },
   {
     "competitor": "Unified Ferments",
@@ -75,12 +71,12 @@
     "geocode_status": "resolved",
     "phone": "",
     "email": "",
-    "needs_review": true,
+    "needs_review": false,
     "staging_address": "",
     "staging_city": "",
     "staging_confidence": 0.0,
     "staging_provider": "",
-    "verified": false
+    "verified": true
   },
   {
     "competitor": "Unified Ferments",
@@ -97,12 +93,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "reservations@askanyc.com",
-    "verified": false,
-    "needs_review": false,
-    "website": "https://askanyc.com",
-    "email_source": "verified_seed",
-    "email_source_url": "https://askanyc.com/contact"
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -123,9 +114,7 @@
     "hours": "17:00-21:00; Fr,Sa 17:00-22:00",
     "contact_source": "openstreetmap",
     "phone": "+1-646-476-7217",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -142,9 +131,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -163,10 +150,7 @@
     "phone": "",
     "email": "",
     "needs_review": false,
-    "verified": true,
-    "website": "https://barmeridian.com",
-    "email_source": "verified_seed",
-    "email_needs_headless": true
+    "verified": true
   },
   {
     "competitor": "Unified Ferments",
@@ -202,9 +186,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -245,9 +227,7 @@
     "contact": "",
     "website": "https://bonniesbrooklyn.com",
     "phone": "(914) 875-3709",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -266,9 +246,7 @@
     "hours": "Mo-Th 12:00-21:00; Fr-Sa 12:00-22:00; Su 12:00-21:00",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -285,9 +263,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -304,9 +280,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -323,9 +297,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -342,12 +314,9 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "hello@cherryontopnyc.com",
+    "email": "",
     "needs_review": false,
-    "verified": true,
-    "website": "https://cherryontopnyc.com",
-    "email_source": "verified_seed",
-    "email_source_url": "https://cherryontopnyc.com/contact"
+    "verified": true
   },
   {
     "competitor": "Unified Ferments",
@@ -364,9 +333,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -387,9 +354,7 @@
     "hours": "Mo-Th 12:00-21:00; Fr 12:00-22:00; Sa 10:00-22:00; Su 10:00-21:00",
     "contact_source": "openstreetmap",
     "phone": "+1-917-261-7430",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -406,9 +371,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -425,15 +388,11 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "contact": "",
-    "website": "https://covenhovennyc.com",
+    "website": "https://www.covenhovennyc.com",
     "hours": "Mo-Fr 14:00-23:00; Sa-Su 12:00-23:00",
     "contact_source": "openstreetmap",
     "phone": "+1-718-483-9950",
-    "email": "covenhoven@gmail.com",
-    "verified": false,
-    "needs_review": false,
-    "email_source": "verified_seed",
-    "email_source_url": "https://covenhovennyc.com/contact"
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -473,9 +432,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -495,9 +452,7 @@
     "hours": "Mo-Fr 08:00-16:00; Sa-Su 09:00-17:00 \"cafe\"||We-Sa 16:00-23:00 \"bar\"",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -514,9 +469,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -537,9 +490,7 @@
     "hours": "Mo-We 17:30-22:00; Th-Su 12:00-13:00, 17:30-22:00",
     "contact_source": "openstreetmap",
     "phone": "+1 212-889-0905",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -557,12 +508,12 @@
     "geocode_status": "resolved",
     "phone": "",
     "email": "",
-    "needs_review": true,
+    "needs_review": false,
     "staging_address": "",
     "staging_city": "",
     "staging_confidence": 0.0,
     "staging_provider": "",
-    "verified": false
+    "verified": true
   },
   {
     "competitor": "Unified Ferments",
@@ -598,9 +549,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -616,15 +565,11 @@
     "source_url": "https://unifiedferments.com/FIND-US",
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
-    "website": "https://fourhorsemenbk.com",
+    "website": "https://www.fourhorsemenbk.com",
     "hours": "Mo-Th 17:30-22:45; Fr-Su 11:00-15:30,17:30-22:45",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "info@fourhorsemenbk.com",
-    "verified": false,
-    "needs_review": false,
-    "email_source": "verified_seed",
-    "email_source_url": "https://fourhorsemenbk.com/contact"
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -683,9 +628,7 @@
     "hours": "We-Sa 09:00-21:00; Su 09:00-18:00",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -705,9 +648,7 @@
     "hours": "Mo, We-Su 08:00-16:00",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -743,12 +684,9 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "contact@hanamakgeolli.com",
+    "email": "",
     "needs_review": false,
-    "verified": true,
-    "website": "https://hanamakgeolli.com",
-    "email_source": "verified_seed",
-    "email_source_url": "https://hanamakgeolli.com/contact"
+    "verified": true
   },
   {
     "competitor": "Unified Ferments",
@@ -767,9 +705,7 @@
     "hours": "Mo-Th 17:00-02:00; Fr 17:00-03:00; Sa 14:00-03:00; Su 14:00-02:00",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -790,9 +726,7 @@
     "hours": "We 17:30-22:00; Th-Sa 17:30-24:00; Su 17:30-22:00",
     "contact_source": "openstreetmap",
     "phone": "+1-718-855-2620",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -813,9 +747,7 @@
     "hours": "Mo-Th 17:00-24:00; Fr 17:00-01:00; Sa 14:00-01:00; Su 14:00-24:00",
     "contact_source": "openstreetmap",
     "phone": "+1-917-909-0434",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -837,12 +769,12 @@
     "contact_source": "openstreetmap",
     "phone": "+1 315-787-0400",
     "email": "",
-    "needs_review": true,
+    "needs_review": false,
     "staging_address": "",
     "staging_city": "",
     "staging_confidence": 0.0,
     "staging_provider": "",
-    "verified": false
+    "verified": true
   },
   {
     "competitor": "Unified Ferments",
@@ -862,9 +794,7 @@
     "website": "https://www.lavarany.com",
     "contact_source": "openstreetmap",
     "phone": "+1-718-422-0065",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -913,8 +843,7 @@
     "staging_city": "",
     "staging_confidence": 0.0,
     "staging_provider": "",
-    "staging_note": "unconfirmed match — manual review required",
-    "verified": false
+    "staging_note": "unconfirmed match — manual review required"
   },
   {
     "competitor": "Unified Ferments",
@@ -931,9 +860,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -953,9 +880,7 @@
     "hours": "Mo-Fr 12:00-20:00; Sa 12:00-19:00; Su 12:00-18:00",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -996,9 +921,7 @@
     "website": "https://www.missadanyc.com",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1016,8 +939,8 @@
     "geocode_status": "resolved",
     "phone": "",
     "email": "",
-    "needs_review": true,
-    "verified": false
+    "needs_review": false,
+    "verified": true
   },
   {
     "competitor": "Unified Ferments",
@@ -1079,9 +1002,7 @@
     "hours": "Tu-Th 17:30-22:00; Fr-Sa 17:30-22:30",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1119,9 +1040,7 @@
     "website": "https://www.ostudiony.com/ocafe",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1139,12 +1058,12 @@
     "geocode_status": "resolved",
     "phone": "",
     "email": "",
-    "needs_review": true,
+    "needs_review": false,
     "staging_address": "",
     "staging_city": "",
     "staging_confidence": 0.0,
     "staging_provider": "",
-    "verified": false
+    "verified": true
   },
   {
     "competitor": "Unified Ferments",
@@ -1161,12 +1080,9 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "delivery@peoples.wine",
+    "email": "",
     "needs_review": false,
-    "verified": true,
-    "website": "https://peoples.wine",
-    "email_source": "verified_seed",
-    "email_source_url": "https://peoples.wine/contact"
+    "verified": true
   },
   {
     "competitor": "Unified Ferments",
@@ -1185,9 +1101,7 @@
     "website": "https://www.pinchchinese.com/",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1226,9 +1140,7 @@
     "hours": "Tu-Th 17:00-24:00; Fr 17:00-01:00; Sa 16:00-01:00; Su 16:00-24:00",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1247,9 +1159,7 @@
     "hours": "Mo-Fr 11:00-24:00;Sa-Su 10:00-24:00",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1266,12 +1176,9 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "ruffiannyc@gmail.com",
+    "email": "",
     "needs_review": false,
-    "verified": true,
-    "website": "https://ruffiannyc.com",
-    "email_source": "verified_seed",
-    "email_source_url": "https://ruffiannyc.com/contact"
+    "verified": true
   },
   {
     "competitor": "Unified Ferments",
@@ -1312,9 +1219,7 @@
     "contact_source": "openstreetmap",
     "phone": "+1-347-987-3710",
     "email": "",
-    "status": "closed_or_changed",
-    "verified": false,
-    "needs_review": false
+    "status": "closed_or_changed"
   },
   {
     "competitor": "Unified Ferments",
@@ -1334,9 +1239,7 @@
     "website": "https://www.sistersbklyn.com",
     "contact_source": "openstreetmap",
     "phone": "+1-347-763-2537",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1376,9 +1279,7 @@
     "hours": "Mo-Su 12:00-20:00",
     "contact_source": "openstreetmap",
     "phone": "+1-929-277-2520",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1398,9 +1299,7 @@
     "hours": "Mo-Fr 08:00-00:00; Sa-Su 00:00-01:00, 08:00-00:00",
     "contact_source": "openstreetmap",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1421,9 +1320,7 @@
     "hours": "Mo-Fr 17:00-02:00, Sa-Su 15:00-02:00",
     "contact_source": "openstreetmap",
     "phone": "+1 212-228-4450",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1444,9 +1341,7 @@
     "hours": "11:30-22:00",
     "contact_source": "openstreetmap",
     "phone": "+1 646-692-9912",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1467,9 +1362,7 @@
     "hours": "Mo-Th 17:30-21:30; Fr 17:30-22:00; Sa 10:00-15:00,17:30-22:00; Su 10:00-15:00,17:30-21:30",
     "contact_source": "openstreetmap",
     "email": "info@vinegarhillhouse.com",
-    "phone": "",
-    "verified": false,
-    "needs_review": false
+    "phone": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1509,9 +1402,7 @@
     "hours": "Mo-Th, Su 18:00-23:00; Fr-Sa 18:00-23:30",
     "contact_source": "openstreetmap",
     "phone": "+1-646-964-5624",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1532,9 +1423,7 @@
     "hours": "Tu-Sa 17:30-23:00; Su 17:30-22:00",
     "contact_source": "openstreetmap",
     "phone": "+1-347-457-6010",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1551,9 +1440,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1570,9 +1457,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1589,9 +1474,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1608,9 +1491,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1627,9 +1508,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1646,9 +1525,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1665,9 +1542,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1684,9 +1559,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1703,9 +1576,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1722,9 +1593,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1741,9 +1610,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1760,9 +1627,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1779,9 +1644,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1798,9 +1661,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1817,9 +1678,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1836,9 +1695,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1855,9 +1712,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1874,9 +1729,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1893,9 +1746,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1912,9 +1763,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1931,9 +1780,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1950,9 +1797,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1969,9 +1814,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -1988,9 +1831,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2007,9 +1848,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2026,9 +1865,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2045,9 +1882,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2064,9 +1899,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2083,9 +1916,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2102,9 +1933,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2121,9 +1950,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2141,9 +1968,7 @@
     "geocode_status": "resolved",
     "phone": "(323) 665-5656",
     "email": "",
-    "website": "https://lolowinebar.com",
-    "verified": false,
-    "needs_review": false
+    "website": "https://lolowinebar.com"
   },
   {
     "competitor": "Unified Ferments",
@@ -2160,9 +1985,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2179,9 +2002,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2198,9 +2019,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2217,9 +2036,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2236,9 +2053,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2255,9 +2070,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2274,9 +2087,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2293,9 +2104,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2312,9 +2121,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2331,9 +2138,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2350,9 +2155,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2369,9 +2172,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2388,9 +2189,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2407,9 +2206,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2426,9 +2223,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2445,9 +2240,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2464,9 +2257,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2483,9 +2274,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2502,9 +2291,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2521,9 +2308,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2540,9 +2325,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2559,9 +2342,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2578,9 +2359,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2597,9 +2376,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2616,9 +2393,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2635,9 +2410,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2654,9 +2427,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2673,9 +2444,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2692,9 +2461,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2711,9 +2478,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2730,9 +2495,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2749,9 +2512,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2768,9 +2529,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2787,9 +2546,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2806,9 +2563,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2825,9 +2580,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2844,9 +2597,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2863,9 +2614,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2882,9 +2631,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2901,9 +2648,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2920,9 +2665,7 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   },
   {
     "competitor": "Unified Ferments",
@@ -2939,8 +2682,6 @@
     "scraped_at": "2026-08-31T21:28:01.706216+00:00",
     "geocode_status": "resolved",
     "phone": "",
-    "email": "",
-    "verified": false,
-    "needs_review": false
+    "email": ""
   }
 ]

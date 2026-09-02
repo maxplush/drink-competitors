@@ -1,0 +1,12 @@
+{
+  "applied_at": "2026-09-01T23:52:50.328491+00:00",
+  "backup_dir": "C:\\Users\\dbox1\\Documents\\comp-drink\\data\\migrations\\location_corrections_backup",
+  "summary": {
+    "corrected": 0,
+    "flagged": 6,
+    "closed_or_changed": 0,
+    "deleted": 0,
+    "merged": 0,
+    "fixed": 0
+  }
+}

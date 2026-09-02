@@ -1,0 +1,149 @@
+﻿========================================================================
+SHOULD RETURN NULL (wrong statewide matches blocked)
+========================================================================
+
+--- SAGA ---
+result: null
+
+--- THE FLY ---
+result: {
+  "provider": "nominatim",
+  "confidence": 1.0,
+  "needs_review": false,
+  "address": "549 Classon Avenue, Brooklyn, NY, 11238",
+  "suburb": "Brooklyn",
+  "latitude": 40.682011,
+  "longitude": -73.9584752,
+  "osm_type": "bar",
+  "query_used": "THE FLY, New York, NY, USA"
+}
+
+--- WHITE TIGER ---
+result: {
+  "provider": "nominatim",
+  "confidence": 0.6875,
+  "needs_review": true,
+  "address": "Hillside Avenue, Herricks, NY, 11040",
+  "suburb": "Herricks",
+  "latitude": 40.7518475,
+  "longitude": -73.6716944,
+  "osm_type": "dojo",
+  "query_used": "WHITE TIGER, New York, NY, USA"
+}
+
+--- LITTLE FLOWER ---
+result: {
+  "provider": "photon",
+  "confidence": 0.8387096774193549,
+  "needs_review": true,
+  "address": "25-35 36th Avenue, Queens, NY, 11106",
+  "suburb": "Queens",
+  "latitude": 40.7578849,
+  "longitude": -73.9321866,
+  "osm_type": "cafe",
+  "query_used": "LITTLE FLOWER, New York, NY, USA"
+}
+
+--- AS IS ---
+result: {
+  "provider": "nominatim",
+  "confidence": 1.0,
+  "needs_review": false,
+  "address": "734 10th Avenue, Manhattan, NY, 10019",
+  "suburb": "Manhattan",
+  "latitude": 40.7646909,
+  "longitude": -73.9915481,
+  "osm_type": "bar",
+  "query_used": "734 10th Ave, New York, NY 10019, USA"
+}
+
+--- WINONA'S ---
+result: null
+
+--- CHERRY ON TOP ---
+result: null
+
+--- RUFFIAN ---
+result: null
+
+--- FORT DEFIANCE ---
+result: {
+  "provider": "photon",
+  "confidence": 0.5517241379310345,
+  "needs_review": true,
+  "address": "24-05 23rd Avenue, Queens, NY, 11105",
+  "suburb": "Queens",
+  "latitude": 40.777439,
+  "longitude": -73.916989,
+  "osm_type": "deli",
+  "query_used": "FORT DEFIANCE, New York, NY, USA"
+}
+
+========================================================================
+SHOULD RESOLVE
+========================================================================
+
+--- ASKA ---
+result: {
+  "provider": "nominatim",
+  "confidence": 1.0,
+  "needs_review": false,
+  "address": "47 South 5th Street, Brooklyn, NY, 11249",
+  "suburb": "Brooklyn",
+  "latitude": 40.7124231,
+  "longitude": -73.9664901,
+  "osm_type": "yes",
+  "query_used": "47 S 5th St, Brooklyn, NY 11249, USA"
+}
+
+--- ROBERTA'S ---
+result: {
+  "provider": "nominatim",
+  "confidence": 1.0,
+  "needs_review": false,
+  "address": "261 Moore Street, Brooklyn, NY, 11206",
+  "suburb": "Brooklyn",
+  "latitude": 40.7050062,
+  "longitude": -73.9335894,
+  "osm_type": "restaurant",
+  "query_used": "ROBERTA'S, New York, NY, USA"
+}
+
+--- COMPAGNIE DE VINS ---
+result: {
+  "provider": "photon",
+  "confidence": 0.723404255319149,
+  "needs_review": true,
+  "address": "249 Centre Street, Manhattan, NY, 10013",
+  "suburb": "Manhattan",
+  "latitude": 40.7204999,
+  "longitude": -73.9980785,
+  "osm_type": "bar",
+  "query_used": "COMPAGNIE DE VINS, New York, NY, USA"
+}
+
+--- CAMPBELL CHEESE AND GROCERY ---
+result: {
+  "provider": "photon",
+  "confidence": 0.5789473684210527,
+  "needs_review": true,
+  "address": "502 Lorimer Street, Brooklyn, NY, 11211",
+  "suburb": "Brooklyn",
+  "latitude": 40.712008,
+  "longitude": -73.9489067,
+  "osm_type": "cafe",
+  "query_used": "CAMPBELL CHEESE AND GROCERY, New York, NY, USA"
+}
+
+--- CROWN SHY ---
+result: {
+  "provider": "nominatim",
+  "confidence": 1.0,
+  "needs_review": false,
+  "address": "70 Pine Street, Manhattan, NY, 10005",
+  "suburb": "Manhattan",
+  "latitude": 40.706227,
+  "longitude": -74.0075097,
+  "osm_type": "restaurant",
+  "query_used": "CROWN SHY, New York, NY, USA"
+}

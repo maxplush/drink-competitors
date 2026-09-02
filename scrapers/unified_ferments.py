@@ -13,10 +13,11 @@ from typing import Any
 import requests
 from bs4 import BeautifulSoup
 
+from scrapers.venue_geocode import GeocodeHit, normalize_from_photon, resolve_venue_name
+
 COMPETITOR = "Unified Ferments"
 SOURCE_URL = "https://unifiedferments.com/FIND-US"
 USER_AGENT = "comp-drink/0.1 (+local competitor stockist research)"
-NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
 PHOTON_URL = "https://photon.komoot.io/api/"
 
 # Page typos / names that need a stronger search form
@@ -46,6 +47,15 @@ MANUAL_ADDRESSES: dict[str, str] = {
     "GETAWAY": "743 Riverside Dr, New York, NY 10031, USA",
     "MOONFLOWER": "201 W 11th St, New York, NY 10014, USA",
     "CHEESEPLATE BROOKLYN": "323 Court St, Brooklyn, NY 11231, USA",
+    "LIL DEB'S OASIS": "747 Columbia St, Hudson, NY 12534, USA",
+    "LIL DEB’S OASIS": "747 Columbia St, Hudson, NY 12534, USA",
+    "KINDRED FARE": "512 Hamilton St, Geneva, NY 14456, USA",
+    "AS IS": "734 10th Ave, New York, NY 10019, USA",
+    "EXTRA EXTRA PIZZA": "549 W Utica St, Buffalo, NY 14213, USA",
+    "PEARL STREET SUPPER CLUB": "147 Front St, Brooklyn, NY 11201, USA",
+    "SAGA": "70 Pine St, 63rd Floor, New York, NY 10005, USA",
+    "THE GETAWAY 151": "743 Riverside Dr, New York, NY 10031, USA",
+    "The Getaway 151": "743 Riverside Dr, New York, NY 10031, USA",
 }
 
 # Permanently closed — drop from dataset even if still listed on FIND-US
@@ -54,6 +64,10 @@ REMOVE_NAMES = {
     "ILIS",
     "MENA",
     "ANTO",
+    "WHITE TIGER",
+    "WHITE TIGER TAVERN",
+    "WINONA'S",
+    "WINONA’S",
 }
 
 # Post-scrape fixes: rename / replace address / expand one listing into multiple sites
@@ -72,7 +86,7 @@ LOCATION_OVERRIDES: dict[str, list[dict[str, str]]] = {
         {"name": "The Getaway 151", "address": "743 Riverside Dr, New York, NY 10031, USA"},
     ],
     "MOONFLOWER": [
-        {"name": "MOONFLOWER", "address": "201 W 11th St, New York, NY 10014, USA"},
+        {"name": "MOONFLOWER", "address": "201 West 11th Street, Manhattan, NY 10014, USA"},
     ],
     "BONNIES": [
         {
@@ -104,6 +118,13 @@ LOCATION_OVERRIDES: dict[str, list[dict[str, str]]] = {
             "address": "1651 Lexington Ave, New York, NY 10029, USA",
             "phone": "(646) 876-1054",
             "website": "https://alisonny.com",
+        },
+    ],
+    "SAGA": [
+        {
+            "name": "SAGA",
+            "address": "70 Pine St, 63rd Floor, New York, NY 10005, USA",
+            "phone": "(212) 339-3963",
         },
     ],
 }
@@ -244,70 +265,18 @@ def _save_cache(path: Path, cache: dict[str, Any]) -> None:
         json.dump(cache, f, ensure_ascii=False, indent=2)
 
 
-def _state_ok(result: dict[str, Any], expected_state: str) -> bool:
-    addr = result.get("address") or {}
-    state = (addr.get("state") or "").strip()
-    code = (addr.get("ISO3166-2-lvl4") or addr.get("state_code") or "").strip().upper()
-    expected = expected_state.upper()
-    if code.endswith(f"-{expected}") or code == expected:
-        return True
-    aliases = {
-        "NY": {"new york"},
-        "CA": {"california"},
-        "NJ": {"new jersey"},
-        "DC": {"district of columbia", "washington"},
-        "MA": {"massachusetts"},
-        "NC": {"north carolina"},
-        "SC": {"south carolina"},
-        "VT": {"vermont"},
+def _hit_to_cache_dict(hit: GeocodeHit) -> dict[str, Any]:
+    return {
+        "latitude": hit.latitude,
+        "longitude": hit.longitude,
+        "address": hit.address,
+        "suburb": hit.suburb,
+        "osm_type": hit.osm_type,
+        "query_used": hit.query_used,
+        "provider": hit.provider,
+        "confidence": hit.confidence,
+        "needs_review": hit.needs_review,
     }
-    if state.lower() in aliases.get(expected, set()):
-        return True
-    # DC sometimes comes back as city-only
-    if expected == "DC" and (addr.get("city") or "").lower() in {"washington", "washington, d.c."}:
-        return True
-    return False
-
-
-def _photon_state_ok(props: dict[str, Any], expected_state: str) -> bool:
-    expected = expected_state.upper()
-    state = (props.get("state") or "").strip()
-    country = (props.get("countrycode") or props.get("country") or "").strip().lower()
-    if country and country not in {"us", "usa", "united states"}:
-        return False
-    # Photon often returns the USPS code (e.g. "MA") rather than the full name.
-    if state.upper() == expected:
-        return True
-    aliases = {
-        "NY": {"new york"},
-        "CA": {"california"},
-        "NJ": {"new jersey"},
-        "DC": {"district of columbia", "washington, d.c.", "washington"},
-        "MA": {"massachusetts"},
-        "NC": {"north carolina"},
-        "SC": {"south carolina"},
-        "VT": {"vermont"},
-    }
-    if state.lower() in aliases.get(expected, set()):
-        return True
-    if expected == "DC" and (props.get("city") or "").lower() in {
-        "washington",
-        "washington, d.c.",
-    }:
-        return True
-    return False
-
-
-def _format_photon_address(props: dict[str, Any]) -> str:
-    parts = [
-        props.get("housenumber"),
-        props.get("street"),
-        props.get("city") or props.get("town") or props.get("village") or props.get("district"),
-        props.get("state"),
-        props.get("postcode"),
-        props.get("country"),
-    ]
-    return ", ".join(str(p) for p in parts if p)
 
 
 def resolve_place(
@@ -339,85 +308,20 @@ def resolve_place(
             ]
         )
 
-    hit: dict[str, Any] | None = None
-    # On retry of a failed lookup, skip Nominatim (already exhausted) and use Photon.
-    use_nominatim = not force
-
-    if use_nominatim:
-        for q in queries[:8]:
-            try:
-                res = session.get(
-                    NOMINATIM_URL,
-                    params={
-                        "q": q,
-                        "format": "jsonv2",
-                        "addressdetails": 1,
-                        "limit": 5,
-                        "countrycodes": "us",
-                    },
-                    timeout=40,
-                )
-                res.raise_for_status()
-                results = res.json() or []
-            except requests.RequestException:
-                time.sleep(pause)
-                continue
-
-            time.sleep(pause)
-            for result in results:
-                if not _state_ok(result, expected_state):
-                    continue
-                try:
-                    lat = float(result["lat"])
-                    lng = float(result["lon"])
-                except (KeyError, TypeError, ValueError):
-                    continue
-                hit = {
-                    "latitude": lat,
-                    "longitude": lng,
-                    "address": result.get("display_name") or "",
-                    "osm_type": result.get("type") or "",
-                    "query_used": q,
-                    "provider": "nominatim",
-                }
-                break
-            if hit:
-                break
-
-    if not hit:
-        for q in queries[:12]:
-            try:
-                res = session.get(PHOTON_URL, params={"q": q, "limit": 5}, timeout=30)
-                res.raise_for_status()
-                features = res.json().get("features") or []
-            except requests.RequestException:
-                time.sleep(0.35)
-                continue
-
-            time.sleep(0.35)
-            for feature in features:
-                props = feature.get("properties") or {}
-                if not _photon_state_ok(props, expected_state):
-                    continue
-                coords = (feature.get("geometry") or {}).get("coordinates") or []
-                if len(coords) < 2:
-                    continue
-                lng, lat = float(coords[0]), float(coords[1])
-                address = _format_photon_address(props) or props.get("name") or q
-                hit = {
-                    "latitude": lat,
-                    "longitude": lng,
-                    "address": address,
-                    "osm_type": props.get("osm_value") or props.get("type") or "",
-                    "query_used": q,
-                    "provider": "photon",
-                }
-                break
-            if hit:
-                break
-
-    cache[cache_key] = hit
-    return hit
+    manual = _alias_or_manual(MANUAL_ADDRESSES, name)
+    hit = resolve_venue_name(
+        name,
+        query_area,
+        expected_state,
+        session,
+        queries,
+        pause=pause,
+        use_nominatim=not force,
+        manual_street=manual,
+    )
+    result = _hit_to_cache_dict(hit) if hit else None
+    cache[cache_key] = result
+    return result
 
 
 def enrich(venues: list[dict[str, str]], cache_path: Path, retry_unresolved: bool = True) -> list[dict[str, Any]]:
@@ -443,7 +347,7 @@ def enrich(venues: list[dict[str, str]], cache_path: Path, retry_unresolved: boo
             "source_id": "",
             "name": venue["name"],
             "address": (resolved or {}).get("address") or f"{venue['name']}, {venue['region']}",
-            "suburb": venue["region"],
+            "suburb": (resolved or {}).get("suburb") or venue["region"],
             "region": "US",
             "state": venue["state"],
             "venue_type": "",
@@ -452,6 +356,8 @@ def enrich(venues: list[dict[str, str]], cache_path: Path, retry_unresolved: boo
             "source_url": SOURCE_URL,
             "scraped_at": scraped_at,
             "geocode_status": "resolved" if resolved else "unresolved",
+            "verified": False,
+            "needs_review": bool((resolved or {}).get("needs_review")),
         }
         rows.append(row)
         if i % 10 == 0 or i == len(venues):
@@ -497,7 +403,10 @@ def geocode_street_address(
 
     lng, lat = float(coords[0]), float(coords[1])
     props = feature.get("properties") or {}
-    display = _format_photon_address(props) or address
+    state_hint = (props.get("state") or "NY")[:2].upper() if props.get("state") else "NY"
+    display, _ = normalize_from_photon(props, state_hint)
+    if not display:
+        display = address
     cache[key] = {"latitude": lat, "longitude": lng, "address": display}
     return lat, lng, display
 
@@ -515,6 +424,9 @@ def apply_corrections(rows: list[dict[str, Any]], cache_path: Path) -> list[dict
     for row in rows:
         key = _norm_name(row.get("name") or "").upper()
         if key in remove:
+            continue
+        if row.get("verified"):
+            out.append(row)
             continue
         if key not in overrides:
             out.append(row)
@@ -556,6 +468,7 @@ def save(rows: list[dict[str, Any]], out_dir: Path) -> tuple[Path, Path]:
         "source_id",
         "name",
         "address",
+        "scraped_address",
         "suburb",
         "region",
         "state",
@@ -565,6 +478,8 @@ def save(rows: list[dict[str, Any]], out_dir: Path) -> tuple[Path, Path]:
         "source_url",
         "scraped_at",
         "geocode_status",
+        "verified",
+        "needs_review",
     ]
     with csv_path.open("w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
@@ -577,10 +492,22 @@ def save(rows: list[dict[str, Any]], out_dir: Path) -> tuple[Path, Path]:
 def main() -> None:
     root = Path(__file__).resolve().parents[1]
     cache_path = root / "data" / "uf_geocode_cache.json"
+    json_path = root / "data" / "unified_ferments_locations.json"
+
+    from scrapers.location_merge import (
+        apply_verified_and_review_flags,
+        load_json_rows,
+        merge_scraped_into_existing,
+        uf_row_key,
+    )
+
+    existing = load_json_rows(json_path)
     venues = parse_venues(fetch_html())
     print(f"Parsed {len(venues)} Unified Ferments venues")
-    rows = enrich(venues, cache_path)
-    rows = apply_corrections(rows, cache_path)
+    scraped = enrich(venues, cache_path)
+    scraped = apply_corrections(scraped, cache_path)
+    rows = merge_scraped_into_existing(existing, scraped, uf_row_key)
+    rows = apply_verified_and_review_flags(rows)
     json_path, csv_path = save(rows, root / "data")
     resolved = sum(1 for r in rows if r["geocode_status"] == "resolved")
     print(f"After corrections: {len(rows)} venues ({resolved} resolved)")

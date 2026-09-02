@@ -1,4 +1,7 @@
-"""Enrich NYC location records with contact info from OpenStreetMap (Nominatim)."""
+"""Enrich NYC location records with contact info from OpenStreetMap (Nominatim).
+
+For email addresses, use scrapers.enrich_venue_emails (search + venue contact pages).
+"""
 
 from __future__ import annotations
 
