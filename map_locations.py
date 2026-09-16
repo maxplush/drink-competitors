@@ -18,6 +18,7 @@ COMPETITOR_COLORS = {
     "Unified Ferments": "#8b3a62",
     "Researched Prospect Locations": "#3d5a80",
     "Savoure": "#a34a2e",
+    "Retail Prospects": "#5a3e8a",
 }
 
 # Preset camera positions
@@ -97,7 +98,9 @@ def build_map(rows: list[dict]) -> folium.Map:
     plottable = [
         r
         for r in rows
-        if r.get("latitude") is not None and r.get("longitude") is not None
+        if r.get("latitude") is not None
+        and r.get("longitude") is not None
+        and (r.get("status") or "").lower() != "closed"
     ]
 
     start = VIEWS["ny"]
@@ -576,6 +579,7 @@ def build_dashboard(rows: list[dict]) -> str:
       --c-uni: #8b3a62;
       --c-pro: #3d5a80;
       --c-sav: #a34a2e;
+      --c-ret: #5a3e8a;
     }}
     * {{ box-sizing: border-box; }}
     html, body {{
@@ -686,6 +690,7 @@ def build_dashboard(rows: list[dict]) -> str:
     .share-bar .seg-uni {{ background: var(--c-uni); }}
     .share-bar .seg-pro {{ background: var(--c-pro); }}
     .share-bar .seg-sav {{ background: var(--c-sav); }}
+    .share-bar .seg-ret {{ background: var(--c-ret); }}
     .share-label {{
       margin-top: 8px; font-size: 13.5px; color: var(--ink-2);
       font-variant-numeric: tabular-nums;
@@ -739,6 +744,7 @@ def build_dashboard(rows: list[dict]) -> str:
     tr.c-Unified td.col-brand {{ border-left-color: var(--c-uni); }}
     tr.c-Prospects td.col-brand {{ border-left-color: var(--c-pro); }}
     tr.c-Savoure td.col-brand {{ border-left-color: var(--c-sav); }}
+    tr.c-Retail td.col-brand {{ border-left-color: var(--c-ret); }}
     td.col-name {{
       font-weight: 500;
       overflow: hidden;
@@ -846,6 +852,7 @@ def build_dashboard(rows: list[dict]) -> str:
       tr.c-Unified {{ border-left-color: var(--c-uni); }}
       tr.c-Prospects {{ border-left-color: var(--c-pro); }}
       tr.c-Savoure {{ border-left-color: var(--c-sav); }}
+      tr.c-Retail {{ border-left-color: var(--c-ret); }}
       tbody td {{
         border: 0; padding: 0; width: auto !important;
       }}
@@ -898,6 +905,7 @@ def build_dashboard(rows: list[dict]) -> str:
               <button type="button" class="chip" data-competitor="Unified Ferments"><span class="dot" style="background:var(--c-uni)"></span>Unified Ferments <span class="chip-count" data-count-for="Unified Ferments">0</span></button>
               <button type="button" class="chip" data-competitor="Researched Prospect Locations"><span class="dot" style="background:var(--c-pro)"></span>Prospects <span class="chip-count" data-count-for="Researched Prospect Locations">0</span></button>
               <button type="button" class="chip" data-competitor="Savoure"><span class="dot" style="background:var(--c-sav)"></span>Savoure <span class="chip-count" data-count-for="Savoure">0</span></button>
+              <button type="button" class="chip" data-competitor="Retail Prospects"><span class="dot" style="background:var(--c-ret)"></span>Retail Prospects <span class="chip-count" data-count-for="Retail Prospects">0</span></button>
             </div>
           </div>
           <label class="field"><span>State / region</span>
@@ -920,6 +928,7 @@ def build_dashboard(rows: list[dict]) -> str:
             <span class="seg seg-uni" id="segUni" style="flex:0 0 0%"></span>
             <span class="seg seg-pro" id="segPro" style="flex:0 0 0%"></span>
             <span class="seg seg-sav" id="segSav" style="flex:0 0 0%"></span>
+            <span class="seg seg-ret" id="segRet" style="flex:0 0 0%"></span>
           </div>
           <div class="share-label"><strong id="shareN">0</strong> of {total:,} locations</div>
         </div>
@@ -988,6 +997,7 @@ def build_dashboard(rows: list[dict]) -> str:
     const segUni = document.getElementById('segUni');
     const segPro = document.getElementById('segPro');
     const segSav = document.getElementById('segSav');
+    const segRet = document.getElementById('segRet');
 
     let activeCompetitor = '';
 
@@ -1050,6 +1060,7 @@ def build_dashboard(rows: list[dict]) -> str:
       else if (name === 'Unified Ferments') cls = 'c-Unified';
       else if (name === 'Researched Prospect Locations') cls = 'c-Prospects';
       else if (name === 'Savoure') cls = 'c-Savoure';
+      else if (name === 'Retail Prospects') cls = 'c-Retail';
       if (row && row.verified) cls += ' is-verified';
       if (row && row.needs_review) cls += ' needs-review';
       return cls.trim();
@@ -1098,6 +1109,7 @@ def build_dashboard(rows: list[dict]) -> str:
         'Unified Ferments': 0,
         'Researched Prospect Locations': 0,
         'Savoure': 0,
+        'Retail Prospects': 0,
       }};
       base.forEach((row) => {{
         if (counts[row.competitor] != null) counts[row.competitor] += 1;
@@ -1117,6 +1129,7 @@ def build_dashboard(rows: list[dict]) -> str:
         'Unified Ferments': 0,
         'Researched Prospect Locations': 0,
         'Savoure': 0,
+        'Retail Prospects': 0,
       }};
       rows.forEach((row) => {{
         if (brands[row.competitor] != null) brands[row.competitor] += 1;
@@ -1127,6 +1140,7 @@ def build_dashboard(rows: list[dict]) -> str:
       segUni.style.flex = '0 0 ' + pct(brands['Unified Ferments']) + '%';
       segPro.style.flex = '0 0 ' + pct(brands['Researched Prospect Locations']) + '%';
       segSav.style.flex = '0 0 ' + pct(brands.Savoure) + '%';
+      segRet.style.flex = '0 0 ' + pct(brands['Retail Prospects']) + '%';
     }}
 
     function render() {{
@@ -1229,7 +1243,11 @@ def main() -> None:
         c = row.get("competitor") or "?"
         by_comp[c] = by_comp.get(c, 0) + 1
     plotted = sum(
-        1 for r in rows if r.get("latitude") is not None and r.get("longitude") is not None
+        1
+        for r in rows
+        if r.get("latitude") is not None
+        and r.get("longitude") is not None
+        and (r.get("status") or "").lower() != "closed"
     )
     print(f"Mapped {plotted} locations -> {OUT_HTML}")
     print(f"Dashboard -> {OUT_DASHBOARD}")
